@@ -1,0 +1,341 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"create",
+				"createLeftScoreDiffContainer"
+			],
+			[
+				"render",
+				"renderMatchdays"
+			],
+			[
+				"e",
+				"events"
+			],
+			[
+				"cl",
+				"clickHandler"
+			],
+			[
+				"find",
+				"findPlayerById"
+			],
+			[
+				"Sessi",
+				"SessionTemplate"
+			],
+			[
+				"hover",
+				"hoverEffect"
+			],
+			[
+				"sessi",
+				"sessionSchema"
+			],
+			[
+				"lose",
+				"loserRating"
+			],
+			[
+				"sess",
+				"sessionId"
+			],
+			[
+				"group",
+				"groupedGames"
+			],
+			[
+				"winner",
+				"winnerRating"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 334.0,
+		"selected_items":
+		[
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/erik wendel/Documents/Dev/matbasen/matbasen.sublime-project",
+		"/Users/erik wendel/Documents/Dev/matbasen/js/models/foodWrapper.js",
+		"/Users/erik wendel/Documents/Dev/matbasen/js/DayView.js",
+		"/Users/erik wendel/Documents/Dev/matbasen/js/TotalView.js",
+		"/Users/erik wendel/Documents/Dev/matbasen/webserver.js",
+		"/Users/erik wendel/Documents/Dev/matbasen/js/main.js",
+		"/Users/erik wendel/Documents/Dev/matbasen/js/user.js",
+		"/Users/erik wendel/Documents/Dev/matbasen/js/templates/foodItem.mustache",
+		"/Users/erik wendel/Documents/Dev/matbasen/js/foodItem.mustache",
+		"/Users/erik wendel/Documents/Dev/matbasen/js/FoodItemView.js",
+		"/Users/erik wendel/Documents/Dev/matbasen/js/FoodModel.js",
+		"/Users/erik wendel/Documents/Dev/matbasen/index.html",
+		"/Users/erik wendel/Documents/Dev/matbasen/css/framework.less",
+		"/Users/erik wendel/Documents/Dev/oslosquash/backend/persistence.js",
+		"/Users/erik wendel/Documents/Dev/oslosquash/server.js",
+		"/Users/erik wendel/Documents/Dev/matbasen/js/data/foods.js",
+		"/C/Dev/matbasen/js/foodItem.mustache",
+		"/C/Dev/matbasen/js/DayView.js",
+		"/C/Dev/matbasen/js/models/foodWrapper.js",
+		"/C/Dev/oslosquash/server.js",
+		"/C/Dev/matbasen/js/templates/foodItem.mustache",
+		"/C/Dev/matbasen/js/main.js",
+		"/C/Dev/matbasen/libs/moment/moment.js",
+		"/C/Dev/matbasen/erikwe_mat.backup.txt",
+		"/C/Dev/matbasen/js/app.js",
+		"/C/Dev/node-sms-test/node.js",
+		"/C/Dev/matbasen/server2.js",
+		"/C/Dev/oslosquash/js/templates/matchSession.mustache",
+		"/C/Dev/oslosquash/js/models/match.js",
+		"/C/Dev/oslosquash/css/framework.less",
+		"/C/Dev/oslosquash/index.html",
+		"/C/Dev/oslosquash/js/views/sessionView.js",
+		"/C/Dev/oslosquash/js/app.js",
+		"/C/Dev/oslosquash/js/views/matchSessionView.js",
+		"/C/Dev/oslosquash/js/events.js",
+		"/C/Dev/js-java-setup-master/src/main/webapp/js/component/eventBus.js",
+		"/C/Dev/oslosquash/js/Views/sessionView.js",
+		"/C/Dev/oslosquash/js/view/matchSessionView.js",
+		"/C/Dev/oslosquash/js/Views/matchSessionView.js",
+		"/C/Dev/oslosquash/js/models/matchSession.js",
+		"/C/Dev/oslosquash/js/templates/match.mustache",
+		"/C/Dev/oslosquash/js/Views/matchView.js",
+		"/C/Dev/oslosquash/js/base/collection.js",
+		"/C/Dev/oslosquash/mustache.js",
+		"/C/Dev/oslosquash/js/main.js",
+		"/C/Dev/oslosquash/js/templates/matchdayItem.mustache",
+		"/C/Dev/oslosquash/js/base/view.js",
+		"/C/Dev/oslosquash/js/templates/sessionContainer.mustache",
+		"/C/Dev/oslosquash/js/base/model.js",
+		"/C/Dev/oslosquash/js/models/session.js",
+		"/C/Dev/oslosquash/js/templates/headerItem.mustache",
+		"/C/Dev/oslosquash/js/libs/hogan/hogan.js",
+		"/C/Dev/oslosquash/js/libs/hogan/text.js",
+		"/C/Dev/oslosquash/js/libs/hogan/hgn.js",
+		"/C/Dev/oslosquash/js/data/sessions.json",
+		"/C/Dev/js-build/src/main/webapp/js/modules/user/userView.js",
+		"/C/Dev/oslosquash/css/variables.less",
+		"/C/Dev/oslosquash/js/templates/gameItem.mustache",
+		"/C/Dev/oslosquash/src/main/webapp/vendor/almond.js",
+		"/C/Dev/oslosquash/css/mediaqueries.less",
+		"/C/Dev/oslosquash/css/app.less",
+		"/D/Spill/Left4Dead/left4dead/cfg/config.cfg",
+		"/C/Dev/oslosquash/package.json",
+		"/C/Dev/oslosquash/elo.js",
+		"/C/Dev/oslosquash/js/playerdata.json",
+		"/C/Users/wndl/AppData/Roaming/Sublime Text 2/Packages/User/logging.sublime-snippet"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"foodWrapper",
+			"foodwrapper",
+			"renderApp",
+			"port",
+			"8080",
+			"new FoodModel",
+			"itemDone",
+			"reverse",
+			"view/",
+			"/view/",
+			"views/",
+			"matchdayItem",
+			"sync",
+			"gameItem",
+			"userView",
+			"Sessions",
+			"icon",
+			"item",
+			"loadComplete",
+			"loadComplete\n\n",
+			"9999"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"render",
+			"nav"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "NITH.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"foodwrapp",
+				"js/models/foodWrapper.js"
+			],
+			[
+				"foodwrapper",
+				"js/models/foodWrapper.js"
+			],
+			[
+				"dayview",
+				"js/DayView.js"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"foodmodel",
+				"js/FoodModel.js"
+			],
+			[
+				"fooditemview",
+				"js/FoodItemView.js"
+			],
+			[
+				"foodlist",
+				"js/FoodList.js"
+			],
+			[
+				"totalview",
+				"js/TotalView.js"
+			],
+			[
+				"webser",
+				"webserver.js"
+			],
+			[
+				"main",
+				"js/main.js"
+			],
+			[
+				"view",
+				"js/base/view.js"
+			],
+			[
+				"main.js",
+				"js/main.js"
+			],
+			[
+				"less",
+				"css/framework.less"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 194.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
