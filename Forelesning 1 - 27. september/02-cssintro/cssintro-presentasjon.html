@@ -3,7 +3,8 @@
   <head>
     <title>CSS - kurs i Grensesnittsprogrammering</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" href="../remark/remark-bekk.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400|Dosis:300,400|Source+Code+Pro:200,300,400,400bold' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../remark/kimjoe.css">
     <style type="text/css" media="screen">
       @font-face {
         font-family: 'Inconsolata';
@@ -27,7 +28,7 @@
 
     /*Egne ninjatriks:*/
       .whitebg {background: #fff;color:#000;}
-      .hl-text {background:#000;padding:0 .6em 0 0; color: #FD5158; text-transform:uppercase;font-weight: normal;font-size: 1.5em;font-style: italic;}
+      .hl-text {background:#000;color: #FD5158; text-transform:uppercase;font-weight: normal;font-size: 1.5em;}
       .fullscreen {position: relative;}
       .fullscreen img {width:100%; min-height:100%; height:auto; top:0 !important;}
       .fullscreen.higher img {height:115% !important;max-height:115%;}
@@ -162,29 +163,28 @@
     <textarea id="source">
 
 
-class: middle fullscreen
+class: middle fullscreen gangnam
 
 ![CSS](../img/101/css-gangnam.jpg)
-<div class="" style="position:absolute;top:5%;left:5%;-webkit-transform:rotate(-17deg);-moz-transform:rotate(-17deg);transform:rotate(-17deg)">
-<h1>&nbsp;CSS&nbsp;</h1>
-</div>
-<div class="" style="position:absolute;top:9%;left:12%;">
-<h1>Cascading Style Sheets</h1>
+<div class="overlay" style="top:75%;">
+<h1 style="padding: 0px">Cascading Style Sheets</h1>
 </div>
 
 ---
 
-class: agenda
+class: center middle blue
 
 # Agenda
 
-* Introduksjon til CSS
-* Implementere design med CSS
-* Oppgave
+Introduksjon til CSS
+
+Implementere design med CSS
+
+Oppgave
 
 ---
 
-class: middle center
+class: center middle blue
 
 # INTRODUKSJON TIL CSS
 
@@ -210,13 +210,13 @@ class: middle fullscreen
 ![NTNU](../img/101/ntnu-style-on.png)
 
 ---
-#css
+#CSS
 
     selector {property:value}
 
 
 ---
-#css selectors
+#CSS Selectors
 
     /* <body>...</body> */
     body { padding:0 }   
@@ -228,7 +228,7 @@ class: middle fullscreen
     #submarine { color: yellow; position:absolute; bottom: 0 }
 
 ---
-#css selectors
+#CSS Selectors
 
     element   
 
@@ -263,36 +263,36 @@ class: middle fullscreen
 
 class: middle center
 
-# Hvordan bruke CSS til å implementere design?
+# Implementere design med CSS?
 
 ---
 
 # CSS layout properties
 
-    selector {        
-        height: 20px;                            /* Dimensjoner */
-        width: 30px;
+    height:   20px;                             /* Dimensjoner */
+    width:    30px;
 
-        position: absolute;                      /* Posisjonering */
-        top: 10px;
-        right: 10px;
-        bottom: 10px;
-        left: 10px;
+    position: absolute;                         /* Posisjonering */
+    top:      10px;
+    right:    10px;
+    bottom:   10px;
+    left:     10px;
 
-        display: inline;                         /* Dokumentflyt */
+    display:  inline;                           /* Dokumentflyt */
+    display:  block;
+    display:  none;
 
-        float: left;
+    float:    left;
 
-        margin: 10px 10px 10px 10px;             /* Spacing */
-        padding: 10px 10px 10px 10px;
-        border: 1px solid black;
-        outline: 1p solid yellow;
+    margin:   10px 10px 10px 10px;              /* Spacing */
+    padding:  10px 10px 10px 10px;
+    border:   1px solid black;
+    outline:  1p solid yellow;
 
-        text-align: center;                      /* Horisontal posisjonering */
-        margin: 0 auto;                          /* ( auto = all tilgjengelig plass ) */
+    text-align:     center;                     /* Horisontal posisjonering */
+    margin:         0 auto;                     /* ( auto = all tilgjengelig plass ) */
 
-        vertical-align: middle:                  /* Vertikal posisjonering */
-    }
+    vertical-align: middle:                     /* Vertikal posisjonering */
 
 ---
 
@@ -308,9 +308,7 @@ Inline elementer
 
 ---
 
-class: middle fullscreen
-
-
+class: middle fullscreen blackheader
 
 ![Boxes](../img/101/boxes.jpg)
 <div class="" style="position:absolute;top:5%;left:5%;">
@@ -324,9 +322,9 @@ http://flic.kr/p/7v9E6p
 </div>
 
 ---
-class: whitebg
+class:
 
-<span class="hl-text">Box model</span>
+#Box model
 
      div { width: 180px}
 
@@ -341,8 +339,7 @@ Det ble stille og neandertaleren viste hvordan den langhårete krepsen fungerte.
 ---
 class: whitebg
 
-<span class="hl-text">Box model</span>
-
+#Box model
 
      div { width: 180px; padding:40px} /* Ny bredde: 180 + 40 + 40 = 260 */
 
@@ -359,9 +356,9 @@ Det ble stille og neandertaleren viste hvordan den langhårete krepsen fungerte.
 
 
 ---
-class: whitebg
+class:
 
-<span class="hl-text">Box model</span>
+#Box model
 
      div { width: 180px; padding:40px; border: 10px} /* Ny bredde: 260 + 10 + 10 = 280*/
 
@@ -375,9 +372,8 @@ Det ble stille og neandertaleren viste hvordan den langhårete krepsen fungerte.
 </div>
 
 ---
-class: whitebg
 
-<span class="hl-text">Box model</span>
+#Box model
 
      div { width: 180px; padding:40px; border: 10px; margin: 20px} /*box + margin = 320*/
 
@@ -396,10 +392,8 @@ Det ble stille og neandertaleren viste hvordan den langhårete krepsen fungerte.
 class: middle fullscreen
 
 ![Escalator](../img/catbox.jpg)
-<div class="overlay" style="top: 70%">
-<blockquote>
-  BOX-SIZING
-</blockquote>
+<div class="overlay">
+  # BOX-SIZING
 </div>
 
 <div class="source">
@@ -409,8 +403,8 @@ http://www.mrwallpaper.com/wallpapers/Cat-Box.jpg
 ---
 class: whitebg
 
-<span class="hl-text">Box model</span>
-  
+#Box model
+
      div { width: 180px; padding:40px; border: 10px; margin: 20px} /*box + margin = 320*/
 
 &nbsp;
@@ -427,8 +421,8 @@ Det ble stille og neandertaleren viste hvordan den langhårete krepsen fungerte.
 
 class: middle fullscreen
 
-<div class="" style="position:absolute;top:20%;right:17%;">
-<h1>&nbsp;Floating&nbsp;</h1>
+<div class="hl-text" style="position:absolute;top:20%;right:17%;z-index: 5">
+<h1 style="margin: 0; padding: 10px; font-weight: normal; font-style: none;">&nbsp;Floating&nbsp;</h1>
 </div>
 
 ![Float](../img/101/css-rubber-ducks.jpg)
@@ -441,7 +435,7 @@ http://flic.kr/p/a6okjV
 ---
 class: whitebg
 
-<span class="hl-text">Eksempel</span>
+# Eksempel
 
     img {}
 
@@ -457,12 +451,12 @@ En gitarist spillte veldig elegant. Sjeiken dro en purk til han snakket høflig 
 ---
 class: whitebg
 
-<span class="hl-text">Eksempel</span>
+# Eksempel
 
     img {float:left}
   
 
-<div class="css-example">
+<div class="">
     <img src="../img/101/css-rubber-duck.jpg" style="width:30%;height:auto;float:left;"/>
 <h3>Pusekatt brakk</h3>
 <p>
@@ -474,12 +468,12 @@ En gitarist spillte veldig elegant. Sjeiken dro en purk til han snakket høflig 
 ---
 class: whitebg
 
-<span class="hl-text">Eksempel</span>
+# Eksempel
 
     img {float:right}
   
 
-<div class="css-example">
+<div class="">
     <img src="../img/101/css-rubber-duck.jpg" style="width:30%;height:auto;float:right;"/>
 <h3>Pusekatt brakk</h3>
 <p>
@@ -491,11 +485,11 @@ En gitarist spillte veldig elegant. Sjeiken dro en purk til han snakket høflig 
 ---
 class: whitebg
 
-<span class="hl-text">Floating layout</span>
+#Floating layout
 
     article, aside {margin-bottom:10px}
 
-<div class="css-example" style=""> 
+<div class="" style=""> 
    <div style="padding:20px; background: #f5dcdc; margin-bottom:10px">&lt article/ &gt;</div>
    <div style="padding:20px; background: #f5dcdc; margin-bottom: 10px">&lt aside/ &gt;</div>
    <div style="padding:20px; background: #dcf5dc;">&lt footer/ &gt;</div>
@@ -505,14 +499,14 @@ class: whitebg
 ---
 class: whitebg
 
-<span class="hl-text">Floating layout</span>
+#Floating layout
 
     article {width:400px; margin-bottom: 10px; float: left}
 
     aside   {width:200px; margin-bottom: 10px; float: right}
   
 
-<div class="css-example" style=""> 
+<div class="" style=""> 
    <div style="padding:20px; background: #f5dcdc; margin:0 10px 10px 0;float:left;width:410px">
    <h3>Pusekatt brakk</h3>
 <p>
@@ -528,7 +522,7 @@ En gitarist spillte veldig elegant. Sjeiken dro en purk til han snakket høflig 
 ---
 class: whitebg
 
-<span class="hl-text">Clearing float</span>
+#Clearing float
 
     article {width:400px; margin-bottom: 10px; float: left}
 
@@ -537,7 +531,7 @@ class: whitebg
     footer {clear: both}
   
 
-<div class="css-example">
+<div class="">
    <div style="padding:20px; background: #f5dcdc; margin:0 10px 10px 0;float:left;width:410px">
    <h3>Pusekatt brakk</h3>
 <p>
@@ -551,11 +545,11 @@ En gitarist spillte veldig elegant. Sjeiken dro en purk til han snakket høflig 
 ---
 class: whitebg
 
-<span class="hl-text">Collapse</span>
+#Collapse
 
     article {margin-right: 10px; float:left}
 
-<div class="css-example" style="">
+<div class="" style="">
    <div style="padding:20px; background: #f5dcdc; margin-right: 10px; float:left">&lt article/ &gt;</div>
    <div style="padding:20px; background: #f5dcdc; margin-right: 10px; float:left">&lt article/ &gt;</div>
    <div style="padding:20px; background: #f5dcdc; margin-right: 10px; float:left">&lt article/ &gt;</div>
@@ -565,7 +559,7 @@ class: whitebg
 ---
 class: whitebg
 
-<span class="hl-text">Clearfix</span>
+#Clearfix
 
     .container:after { 
         content: "."; 
@@ -592,7 +586,7 @@ http://coding.smashingmagazine.com/2007/05/01/css-float-theory-things-you-should
 -->
 
 ---
-class: middle fullscreen higher
+class: middle fullscreen higher blackheader
 
 ![CSS](../img/101/css-position-misplaced.jpg)
 
@@ -609,7 +603,7 @@ http://flic.kr/p/2yYGP
 ---
 class: whitebg
 
-<span class="hl-text">Static</span>
+#Static
 
     .box { 
         position: static; /* Default */
@@ -617,7 +611,7 @@ class: whitebg
         height: 100px
     }
 
-<div class="css-example">
+<div class="">
     <div class="pbox" style="background:#f5dcdc">A</div>
     <div class="pbox" style="background:#dcf5dc">B</div>
     <div class="pbox" style="background:#44accf">C</div>
@@ -626,7 +620,7 @@ class: whitebg
 ---
 class: whitebg
 
-<span class="hl-text">Relative</span>
+#Relative
 
     .box { 
         position: static; /* Default */
@@ -639,7 +633,7 @@ class: whitebg
         top: 20px
       }
 
-<div class="css-example">
+<div class="">
     <div class="pbox" style="background:#f5dcdc">A</div>
     <div class="pbox" style="background:#dcf5dc;position:relative; left: 80px; top:20px">B</div>
     <div class="pbox" style="background:#44accf">C</div>
@@ -648,7 +642,7 @@ class: whitebg
 ---
 class: whitebg
 
-<span class="hl-text">Absolute</span>
+#Absolute
 
     .box { 
         position: static; /* Default */
@@ -661,7 +655,7 @@ class: whitebg
         top: 0
       }
 
-<div class="css-example">
+<div class="">
     <div class="pbox" style="background:#f5dcdc">A</div>
     <div class="pbox" style="background:#dcf5dc;position:absolute; right: 0; top:0">B</div>
     <div class="pbox" style="background:#44accf">C</div>
@@ -670,7 +664,7 @@ class: whitebg
 ---
 class: whitebg
 
-<span class="hl-text">Absolute</span>
+#Absolute
 
     .container {
         position:relative;
@@ -686,7 +680,7 @@ class: whitebg
         top: 0
       }
 
-<div class="css-example" style="position:relative">
+<div class="" style="position:relative">
     <div class="pbox" style="background:#f5dcdc">A</div>
     <div class="pbox" style="background:#dcf5dc;position:absolute; right: 0; top:0">B</div>
     <div class="pbox" style="background:#44accf">C</div>
@@ -695,14 +689,14 @@ class: whitebg
 ---
 class: whitebg
 
-<span class="hl-text">Fixed</span>
+#Fixed
 
     div:first-child {
         position: fixed;
         z-index: 2
     }
 
-<div class="css-example" style="overflow:auto;height:150px;">
+<div class="" style="overflow:auto;height:150px;">
     <div class="" style="background:#f5dcdc;position:fixed;z-index:2"><h2>1 (fixed)</h2></div>
    ##2
    ##3
@@ -716,7 +710,7 @@ class: whitebg
 ---
 class: whitebg
 
-<span class="hl-text" style="z-idex:1">Awesome</span>
+# Awesome
 
     .lightbox {
         position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba (0,0,0,.65)
@@ -738,10 +732,8 @@ class: middle fullscreen
 
 ![catfight](../img/catfight.jpg)
 
-<div class="overlay" style="top: 70%">
-<blockquote>
-Hva hvis flere selektorer slåss om samme element?
-</blockquote>
+<div class="overlay" style="top: 79%">
+<h1 style="font-size: 32px; text-transform: none;">Hva hvis flere selektorer slåss om samme element?</h1>
 </div>
 
 <div class="source">
@@ -774,7 +766,7 @@ class: middle
 
 #3. Specificity
 
-    * { color:red }
+  { color:red }
 
 &nbsp;
 
@@ -822,7 +814,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 </div>
 
 ---
-#3. specificity
+#3. Specificity
 
     body div.featured { color:red }
 
@@ -841,7 +833,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 
 
 ---
-#3. specificity
+#3. Specificity
 
     body div.featured { color:red }
 
@@ -859,7 +851,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 </div>
 
 ---
-#3. specificity
+#3. Specificity
 
     body div.featured { color:red }
 
@@ -877,7 +869,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 </div>
 
 ---
-#3. specificity
+#3. Specificity
 
     body div.featured { color:red }
 
@@ -896,7 +888,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 
 ---
 
-#3. specificity
+#3. Specificity
 
     #main #content a { color:red }
 
@@ -915,7 +907,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 
 ---
 
-#3. specificity
+#3. Specificity
 
     #main #content a { color:red }
 
@@ -934,7 +926,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 
 ---
 
-#3. specificity
+#3. Specificity
 
     #main #content a { color:red }
 
@@ -953,7 +945,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 
 ---
 
-#3. specificity
+#3. Specificity
 
     #main #content a { color:red }
 
@@ -972,7 +964,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 
 ---
 
-#3. specificity
+#3. Specificity
 
     #main #content a { color:red }
 
@@ -991,7 +983,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 
 
 ---
-#3. specificity
+#3. Specificity
 
 
     <p style="color:red" class="preface">Tekst</p>
@@ -1010,7 +1002,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 </div>
 
 ---
-#3. specificity
+#3. Specificity
 
 
     <p style="color:red" class="preface">Tekst</p>
@@ -1029,7 +1021,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 </div>
 
 ---
-#3. specificity
+#3. Specificity
 
 
     <p style="color:red" class="preface">Tekst</p>
@@ -1048,7 +1040,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 </div>
 
 ---
-#3. specificity
+#3. Specificity
 
 
     <p style="color:red" class="preface">Tekst</p>
@@ -1067,7 +1059,7 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 </div>
 
 ---
-#3. specificity
+#3. Specificity
 
 
     <p style="color:red" class="preface">Tekst</p>
@@ -1087,13 +1079,13 @@ CSS Specificity in 138 characters: CSS Specificity is 4 columns: inline=1|0|0|0,
 
 ---
 
-#3. specificity
+#3. Specificity
 
     .preface {color: red !important}   
 
 
 ---
-#3. specificity NO-NO
+#3. Specificity NO-NO
 
     .preface {color: red !important}
 
@@ -1184,7 +1176,7 @@ class: middle
 ---
 
 
-#specificity quiz
+#Specificity quiz
 
     ul#summer-drinks li {
       font-weight: normal;
@@ -1206,10 +1198,17 @@ class: middle
      </ul>
 
        
+---
+
+class: fullscreen
+
+![iOS CSS Icons](../img/cssicons.png)
+
+[graphicpeel.com/cssiosicons](http://graphicpeel.com/cssiosicons)
 
 ---
 
-class: middle center
+class: fullscreen
 
 ![Really do](../img/really.jpeg)
 
@@ -1219,18 +1218,9 @@ class: middle center
 </blockquote>
 </div>
 
-
 ---
 
-class: middle center
-
-![iOS CSS Icons](../img/cssicons.png)
-
-[graphicpeel.com/cssiosicons](http://graphicpeel.com/cssiosicons)
-
----
-
-class: middle center
+class: fullscreen
 
 ![Opera Logo](../img/opera.png)
 
@@ -1238,70 +1228,101 @@ class: middle center
 
 ---
 
+class: blue middle center
+
 # Oppgave
 
-## Bruk CSS til å <a href="oppgave/design-desktop.jpg">implementere layout</a>
+Bruk CSS til å <a href="oppgave/design-desktop.jpg">implementere layout</a>
 
-## FrontendBootcamp/02-cssintro/oppgave/
+FrontendBootcamp/02-cssintro/oppgave/
 
 ---
+
+class: blue middle center
 
 # Oppgave
   
   ## 1) Stram opp siden ved å
 
-  * Sette en fast bredde (960px) på hele innholdet (hovedcontaineren)
-  * Gi hovedcontaineren en passende padding på alle sider
-  * Gi hovedcontaineren en passende margin på topp og bunn
-  * Midtstill hovedcontaineren på siden
-  * Midtstill overskriften (BEKK)
-  * Plassér søkefeltet øverst i høyre hjørne
+Sette en fast bredde (960px) på hele innholdet (hovedcontaineren)
+
+Gi hovedcontaineren en passende padding på alle sider
+
+Gi hovedcontaineren en passende margin på topp og bunn
+
+Midtstill hovedcontaineren på siden
+
+Midtstill overskriften (BEKK)
+
+Plassér søkefeltet øverst i høyre hjørne
 
 ---
+
+class: blue middle center
 
 # Oppgave 
 
   ## 2) Lag en horisontal meny
 
-  * Fjern defaultstyling på li-elementer
-  * Plasser linkene ved siden av hverandre
-  * Sett bredde på li på 1/5 av tilgjengelig plass
-  * Midtstill innholdet
-  * Gi menyelementene større høyde (f.eks med padding)
+Fjern defaultstyling på li-elementer
+
+Plasser linkene ved siden av hverandre
+
+Sett bredde på li på 1/5 av tilgjengelig plass
+
+Midtstill innholdet
+
+Gi menyelementene større høyde (f.eks med padding)
 
 ---
+
+class: blue middle center
 
 # Oppgave 
 
   ## 3) Dette gjør vi-seksjonen
 
-  * Fire tjenester i bredden
-  * Bruk float og 1/4 bredde 
-  * Padding 10px
-  * Box-sizing
+Fire tjenester i bredden
+
+Bruk float og 1/4 bredde 
+
+Padding 10px
+
+Box-sizing
 
 ---
+
+class: blue middle center
 
 # Oppgave
 
   ## 4) Seksjonsheadere
 
-  * Skal være sentrert midt på siden
-  * Elementet skal ikke dekke hele skjermbredden
-  * Bruk padding for å øke størrelsen
+Skal være sentrert midt på siden
+
+Elementet skal ikke dekke hele skjermbredden
+
+Bruk padding for å øke størrelsen
 
 ---
+
+class: blue middle center
 
 # Oppgave
 
   ## 5) Aktuelt-seksjonen
 
-  * Horisontale elementer 
-  * Første bilde skal være helt mot venstre
-  * Siste bilde skal være helt mot høyre
-  * Midtstilte tekster
+Horisontale elementer 
+
+Første bilde skal være helt mot venstre
+
+Siste bilde skal være helt mot høyre
+
+Midtstilte tekster
 
 ---
+
+class: blue middle center
 
 # Oppgave
 
@@ -1309,34 +1330,45 @@ class: middle center
 
 ---
 
+class: blue middle center
+
 # Oppgave
 
   ## 7) Footer-seksjonen
 
-  * Horisontale elementer
-  * To rekker á fire bilder
+Horisontale elementer
+
+To rekker á fire bilder
 
 ---
+
+class: blue middle center
 
 # Oppgave
 
   ## 8) Forrige/neste-knapper
 
-  * Plassér knappene oppå bildet som på pdf-en
+Plassér knappene oppå bildet som på pdf-en
 
 ---
 
-class: middle center fullscreen
+class: middle center blue
 
 # 9) Finn på noe fett!
 
 ---
 
-class: middle center fullscreen
+class: middle center fullscreen blue
 
   # <a href="../03-cssdesign/cssdesign-presentasjon.html">Klikk for neste presentasjon</a>
+
+
     </textarea>
+
+
     <div id="slideshow"></div>
+
+    
     <script src="../remark/remark-0.5.3.min.js" type="text/javascript"></script>
     <script type="text/javascript">
       var hljs = remark.highlighter.engine;

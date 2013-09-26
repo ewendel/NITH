@@ -4,7 +4,8 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Nettleseren & HTML - Kurs i grensesnittsprogrammering</title>
     <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../remark/remark-bekk.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400|Dosis:300,400|Source+Code+Pro:200,300,400,400bold' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../remark/kimjoe.css">
     <style type="text/css" media="screen">
       .loud {font-size:2em;}
 
@@ -20,19 +21,15 @@
   <body>
     <textarea id="source">
 
-layout: true
-class: frontpage
+class: middle center
 
----
+# Grensesnittsdesign
 
-layout: false
-class: front-page
+### ... den tekniske biten
 
-# Kurs i grensesnittsprogrammering
+En introduksjon til HTML, CSS og JavaScript
 
-## En introduksjon til HTML, CSS og JavaScript
-
-Helge Fredheim & Erik Wendel
+Erik Wendel
 
 ???
 
@@ -45,11 +42,37 @@ Helge Fredheim & Erik Wendel
 
 class: middle center
 
-# Kursholdere
+Erik Wendel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-![Erik Wendel](../img/wendel.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Helge Fredheim](../img/fredheim.png)
+Jobber i konsulentselskapet BEKK
 
-Erik Wendel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Helge Fredheim
+Utvikler mobilbank hos SpareBank1
+
+I mobilfaggruppen i BEKK
+
+<3 gitar, squash og webutvikling
+
+---
+
+class: middle center
+
+# Mål
+
+lære HTML, CSS og JavaScript for å kunne lage sin egen webapp
+
+---
+
+# Agenda
+
+Nettleseren
+
+HTML
+
+CSS
+
+Responsivt design
+
+JavaScript
 
 ---
 
@@ -60,7 +83,6 @@ class: middle center
 ## http://is.gd/gspkurs
 
 ---
-
 
 # Nødvendig programvare
 
@@ -77,150 +99,19 @@ Installer: [her](https://www.google.com/intl/en/chrome/browser/thankyou.html?bra
 
 ---
 
-layout: false
-class: agenda
-
-# Agenda
-
-* Nettleseren
-* HTML
-* CSS
-* Responsivt design
-* Ytelse
-* JavaScript
-
-???
-
-- Lukk laptop under presentasjoner
-- Vær presis tilbake etter pausene
-
----
-
-class: front-page
-
-#Nettleseren
-
----
-
-class: fullscreen middle
-
-![](../img/browser_mosaic_illinois.jpeg);
-
----
-
-class: middle center
-
-# 1990: WorldWideWeb
-# Tim Berners-Lee
-
-.source[http://en.wikipedia.org/wiki/History_of_the_web_browser ]
-
-???
-
-WorldWideWeb - den første nettleseren, fikk senere navnet Nexus
-
-
----
-
-class: fullscreen
-
-![](../img/browser_mosaic.6beta2.png)
-
-#1993: Mosaic
-
-.source[http://en.wikipedia.org/wiki/History_of_the_web_browser ]
-
-???
-
-- Nettleser med grafisk brukergrensesnitt. Lettere å installere og bruke.
-- Kjørte først på unix, senere mac og windows
-- Mens andre nettlesere kunne vise bilder i et eget vindu, kunne denne vise dem inline!
-
-
----
-
-class: fullscreen
-
-![](../img/browser_netscape_1.jpeg)
-
-#1994: Netscape
-
-.source[http://en.wikipedia.org/wiki/History_of_the_web_browser ]
-
-???
-
-- Laget av en av utviklerne av Mosaic, Marc Andreessen
-- Lansert høsten 94, tok av året etter
-
-.source[http://en.wikipedia.org/wiki/History_of_the_web_browser ]
-
----
-
-class: middle center
-
-#16. august 1995
-
-.source[http://en.wikipedia.org/wiki/History_of_the_web_browser ]
-
----
-
-class: fullscreen
-
-![](../img/browser_ie2.gif)
-
-#1995: Internet Explorer
-
-:-)
-
-.source[http://en.wikipedia.org/wiki/History_of_the_web_browser ]
-
-???
-
-- Fun-fact: IE ble ikke utviklet av Microsoft; de kjøpte det av et selskap som het "SpyGlass"
-- Ble etter hvert en integrert i Windows, og tok markedsandeler fra Netscape
-
----
-
-class: middle center
-
-# Netscape
-
-.source[http://en.wikipedia.org/wiki/History_of_the_web_browser ]
-
----
-
-class: middle center
-
-# Netscape
-# Mozilla Firefox
-
-.source[http://en.wikipedia.org/wiki/History_of_the_web_browser ]
-
-???
-
-- Netscape klarte ikke å holde følge med iE
-- Netscape ble open-source under navnet Mozilla
-- Hold følge med IE teknisk, men markedsandeler sank som en stein
+Nettleseren
 
 ---
 
 class: middle center
 
 # Mozilla Firefox
-
---
 
 #Opera
 
---
-
 #Safari
 
---
-
 #Chrome
-
---
 
 #...og IE
 
@@ -260,11 +151,6 @@ class: fullscreen middle
 
 ---
 
-class: fullscreen middle
-![](../img/browser_excite2.png)
-
----
-
 class: middle center
 
 # Graceful degradation
@@ -283,17 +169,17 @@ class: fullscreen middle inverse
 
 class: middle
 
-```xml
+xml
 <noscript>
   Nettleseren støtter ikke JavaScript. Synd for deg. Snakkes!
 </noscript>
-```
+
 
 ---
 
 class: middle
 
-```xml
+xml
 <script src="fancy-pants-supercool-flyout-menu.js"></script>
 <noscript>
   <ul>
@@ -305,7 +191,7 @@ class: middle
       </li>
   </ul>
 </noscript>
-```
+
 
 ---
 
@@ -336,30 +222,15 @@ Feature detection med JS, f.eks. modernizr
 class: fullscreen middle
 
 ![](../img/browser_escalator.jpeg)
-
-.source[http://flic.kr/p/wzHU]
-
----
-
-class: fullscreen middle
-
-![](../img/browser_escalator.jpeg)
-<div class="overlay">
-<blockquote>
-    An escalator can never break, <br />
-    it can only become stairs.
-<cite>Mitch Hedberg</cite>
-</blockquote>
+<div class="overlay loud" style="top:50%">
+  <p>
+      An escalator can never break, <br />
+      it can only become stairs.
+      <small style="display:block;">Mitch Hedberg</small>
+  </p>
 </div>
 
 .source[http://flic.kr/p/wzHU]
-
----
-class: fullscreen middle
-
-![](../img/browser_moped.jpeg)
-
-.source[http://flic.kr/p/4W4qfx]
 
 ---
 class: fullscreen middle
@@ -367,13 +238,39 @@ class: fullscreen middle
 ![](../img/browser_moped.jpeg)
 
 <div class="overlay loud" style="top:71%">
-<p>
-    Moped: Pedaler &amp; motor
-    <small style="display:block;">Progressive enhancement</small>
-</p>
+  <p>
+      Moped: Pedaler &amp; motor
+      <small style="display:block;">Progressive enhancement</small>
+  </p>
 </div>
 
 .source[http://flic.kr/p/4W4qfx]
+---
+
+class: middle center
+
+# Men hva består en nettside av?
+
+---
+
+class: middle center
+
+# HTML
+
+HTML beskriver strukturen og innholdet på en webside.
+
+# CSS
+
+CSS beskriver hvordan innholdet skal se ut.
+
+# JavaScript
+
+JS gir oss interaktivitet på sidene.
+
+???
+
+- Vi skal nå gå gjennom hver av disse for seg og sørge for at vi forstår de grunnleggende konseptene og prinsippene
+
 ---
 
 class: inverse middle center
@@ -382,27 +279,6 @@ class: inverse middle center
 
 .source[http://www.alistapart.com/articles/understandingprogressiveenhancement/ ]
 
-???
-
-- Vi skal innom både html, css og javascript på dette kurset
-
----
-
-class: middle center inverse
-
-![](../img/browser_stats_10_12.png)
-
-???
-
-- Viser at alle nettlesere er i bruk, og at man må ta hensyn til alle
-- I praksis: Ting skal funke i IE7. IE6 støttes ikke. 
-
----
-
-class: middle center
-
-Men hva består en nettside av?
-
 ---
 
 class: fullscreen
@@ -410,11 +286,12 @@ class: fullscreen
 
 .source[http://flic.kr/p/5HzQsy ]
 
----
-
-class: middle center inverse
-
-![](../img/uit.css.off.png)
+<div class="overlay loud" style="top:80%">
+  <p>
+      HTML
+      <small style="display:block;">Innhold og struktur</small>
+  </p>
+</div>
 
 
 ---
@@ -427,15 +304,11 @@ HTML beskriver strukturen og innholdet til en nettside.
 
 Denne strukturen brukes av CSS og JS.
 
---
-
 &nbsp;
 
 HTML sier ingenting om utseende.
 
 HTML sier ingenting om oppførsel.
-
---
 
 &nbsp; 
 
@@ -445,107 +318,37 @@ HTML er et markeringsspråk som beskriver semantikken til et dokument.
 
 ---
 
-class: fullscreen middle
+# Tags og attributter
 
-![](../img/bekk.no.png)
+    <!doctype html>
 
-[view-source:bekk.no](http://www.bekk.no)
+    <html lang="en">
+        <head>
 
----
+            <meta charset="utf-8">
+            <title>En enkel HTML-side</title>
 
-# HTML
-
-## En enkel side
-  
-```xml
-<!doctype html>
-
-<html lang="no">
-    <head>
-
-
-
-
-    </head>
-    <body>
-
-
-
-
-    </body>
-</html>
-```
+        </head>
+        <body>
+            <div class="article">
+                <h1>Velkommen til min flotte nettside!</h1>
+                <p>Her er litt mer informasjon.</p>            
+            </div>
+            <div class="footer">
+                <a href="http://google.com">Søk</a>
+            </div>
+        </body>
+    </html>
 
 ---
 
-# HTML
+class: center middle
 
-## En enkel side
+# Semantikk
 
-```xml
-<!doctype html>
+## html, body, div, span, h1, a, p, ... wtf
 
-<html lang="no">
-    <head>
-
-        <meta charset="utf-8">
-        <title>En enkel HTML-side</title>
-
-    </head>
-    <body>
-
-        <h1>Velkommen til min flotte nettside!</h1>
-        <p>Her er litt <a href="mer.html">mer informasjon</a>.</p>
-
-    </body>
-</html>
-```
-
----
-
-class: middle center
-
-# Nei, la oss heller live-kode litt!
-
-## Sandbox: http://jsbin.com/etifil/2/edit
-
----
-
-#HTML
-
----
-
-#HTML
-
-.two-column[
-
-  - avsnitt
-
-  - uthevet
-
-  - kursiv
-
-  - lenke
-
-  - span
-
-]
-.two-column[
-
-  - layout
-
-  - tabell
-
-  - ulike lister
-
-  - skjemaelementer
-
-  - bilde
-
-  - html5 
-
-
-]
+Semantikk betyr at typen til en HTML-tagg sier noe om hva slags innhold den har.
 
 ---
 
@@ -553,15 +356,15 @@ class: middle center
 
 Mer semantisk riktig HTML
 
-```<div id="header">…</div>```
+    <div id="header">…</div>
 
-```<div class="section"></div>```
+    <div class="section"></div>
 
-```<div id="navigation">…</div>```
+    <div id="navigation">…</div>
 
-```<div class="article"></div>```
+    <div class="article"></div>
 
-```<div id="sidebar"></div>```
+    <div id="sidebar"></div>
 
 ---
 
@@ -569,148 +372,87 @@ Mer semantisk riktig HTML
 
 Mer semantisk riktig HTML
 
-```<div id="header">…</div>``` &mdash; ```<header>…</header>```
+    <div id="header">…</div> &mdash; <header>…</header>
 
-```<div class="section"></div>``` &mdash; ```<section>…</section>```
+    <div class="section"></div> &mdash; <section>…</section>
 
-```<div id="navigation">…</div>``` &mdash; ```<nav>…</nav>```
+    <div id="navigation">…</div> &mdash; <nav>…</nav>
 
-```<div class="article"></div>``` &mdash; ```<article>…</article>```
+    <div class="article"></div> &mdash; <article>…</article>
 
-```<div id="sidebar"></div>``` &mdash; ```<aside>…</aside>```
-
-??? 
-
-På dette kurset bruker vi HTML5!
+    <div id="sidebar"></div> &mdash; <aside>…</aside>
 
 ---
-class: middle center
 
+class: fullscreen
 
-![HTML vs HTML5](../img/HTML-HTML5.jpeg)
+![HTML vs HTML5](../img/HTML-HTML5.jpg)
 
 .source[Elijah Manor / http://i.imgur.com/2Kq6Y.jpg]
-    
----
-
-#HTML4 &amp; HTML5
-
-```xml
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<div id="header">
-    <h1>Velkommen</h1>
-    <div id="nav">
-        <a href="/side2.html">Side2</a>
-    </nav>
-</div>
-<div id="main">
-    <div id="article">En artikkel</div>
-</div>
-<div id="sidebar">Sidebar</div>
-<div id="footer">The end</div>
-```
-&nbsp;
-
-```xml
-<!doctype html>
-<header>
-    <h1>Velkommen</h1>
-    <nav>
-        <a href="/side2.html">Side2</a>
-    </nav>
-</header>
-<main>
-    <article>En artikkel</article>
-</main>
-<aside>Sidebar</aside>
-<footer>The end</footer>
-```        
-
----
-
-#HTML5
-
-##Spesifikasjon
-
-[WHATWG: HTML living standard](http://www.whatwg.org/html/)
-
-[W3C: HTML5](http://dev.w3.org/html5/)
-
-##Mer om HTML5
-[Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/HTML/HTML5)
-
-[Why HTML5 rocks](http://www.html5rocks.com/en/why)
-
----
-
-# HTML
-
-&nbsp;
-
-HTML er enkle tekstfiler.
-
-HTML beskriver strukturen og innholdet til en nettside.
-
-Denne strukturen brukes av CSS og JS.
-
---
-
-&nbsp;
-
-HTML sier ingenting om utseende.
-
-HTML sier ingenting om oppførsel.
-
---
-
-&nbsp;
-
-HTML er ikke et programmeringsspråk
-
-HTML er et markeringsspråk som beskriver semantikken til et dokument.
-
-??? 
-
-- Viktig å bruke riktige tags til en viss type innhold, pga tilgjengelighet, søkemotoroptimalisering
-- 
-
----
-
-# Diskusjon
-
-Hvilke HTML-elementer passer til:
-
-* En meny
-* En artikkel
-* En artikkelliste, f.eks. &laquo;siste nytt&raquo;
-* Et reklamebanner
-* Et bildegalleri
-* En FAQ
-* Viktig tekst
-* Et sitat
-* En forkortelse
-* Kolonner
-* Kursiv tekst
-
 
 ---
 
 class: middle center
 
+# HEAD
+
+Inneholder metadata og includes
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>My Awesome Web App</title>
+        <script src="scripts.js" type="text/javascript"></script>
+        <link href="https://github.com/stylesheet.css" type="text/css" rel="stylesheet"/>
+    </head>
+
+---
+
+# Innhold
+  
+    // Semantiske containere
+    section, article, aside, header, footer, nav, main
+
+    // Ikke-semantiske containere
+    div, span, p
+
+    // Lenke
+    a
+
+    // Lister
+    ul, ol, li
+
+    // Overskrifter
+    h1 - h6
+
+    // Skjemaelementer
+    form, input, select, option
+
+    // Formatering
+    b, em, strong
+
+    // Annet
+    blockquote, cite, code
+
+---
+
+class: middle center red
+
 # Oppgave
 
 ---
 
+class: red
+
 # Oppgave
 
-## Skriv HTML5 for <a href="oppgaver/Mockup.pdf">denne nettsiden</a>.
+## Skriv HTML5 for <a href="../Mockup/Mockup.pdf">denne nettsiden</a>.
 
-* FrontendBootcamp/01-html/oppgaver
+* NITH/01-html/oppgaver
 * Skriv HTML i _index.html_ eller _index-annotated.html_
 
 ---
 
-class: middle center fullscreen
+class: middle center red
 
   # <a href="../02-cssintro/cssintro-presentasjon.html">Klikk for neste presentasjon</a>
 

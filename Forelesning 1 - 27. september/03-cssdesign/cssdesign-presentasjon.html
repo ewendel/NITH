@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>CSS Eye-Candy - Kurs i grensesnittsprogrammering</title>
-    <link rel="stylesheet" href="../remark/remark-bekk.css">
+    <title>CSS Design - Kurs i grensesnittsprogrammering</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400|Dosis:300,400|Source+Code+Pro:200,300,400,400bold' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../remark/kimjoe.css">
     <style type="text/css" media="screen">
         @font-face {
             font-family: 'Inconsolata';
@@ -12,7 +13,17 @@
             src: url('../remark/Inconsolata-Regular.ttf'),
           }
 
-          .gradient { background-image:-moz-linear-gradient(red, green, blue, purple, orange); }
+          .gradient { background-image: -moz-linear-gradient(red, green, blue, purple, orange);
+              background: #1e5799; /* Old browsers */
+              background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%); /* FF3.6+ */
+              background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+              background: -webkit-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+              background: -o-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* Opera 11.10+ */
+              background: -ms-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* IE10+ */
+              background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 100%); /* W3C */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+           }
           .gradient * { color:#fff !important; background: transparent!important; }
           .shadow { background:#333; font-size: 1.5em; text-shadow:2px 2px 0 rgba(0,0,0,0.3); }
           .shadow .shadow1 { background: #444; padding:1em; box-shadow:0 2px 3px rgba(0,0,0,0.2); }
@@ -27,29 +38,29 @@
   <body>
     <textarea id="source">
 
----
+class: yellow middle center
+
+# CSS Design
+
+### Farger, typografi, CSS3
 
 ---
 
-layout: false
-class: front-page
-
-# CSS Eye-Candy
-
-## Farger, typografi, CSS3
-
----
-
-class: agenda
+class: agenda yellow center
 
 #Agenda
 
-* Typografi
-* Farger
-* Gradients  
-* Skygger
-* Transforms 
-* Transitions
+Typografi
+
+Farger
+
+Gradients  
+
+Skygger
+
+Transforms 
+
+Transitions
 
 ---
 
@@ -290,6 +301,10 @@ class: fullscreen
       background-repeat: repeat-x;
       background-position: top center; /* eller koordinater: x y */
     }
+
+???
+
+heihei
 
 ---
 
@@ -592,11 +607,13 @@ class: middle center imganim
 
 ---
 
-class: middle center
+class: middle center yellow
 
 # Oppgave
 
 ---
+
+class: middle center yellow
 
 # Oppgave
 
@@ -605,103 +622,145 @@ class: middle center
 03-cssdesign/oppgave
 
 ---
+class: yellow
 
 # Oppgave
 
 ## 1) Gi riktig utseende til teksten "En alpinist gjenopplivde en sebra..." 
 
-- Skriftstørrelse
-- Font (Port Lligat Slab, Georgia og dernest serif)
-- Avstand til elementene rundt
-- Farge (#2c2c2c)
-- Farge på lenken (#ff503b)
-- Stiplet understreking på lenken
+Skriftstørrelse
+
+Font (Port Lligat Slab, Georgia og dernest serif)
+
+Avstand til elementene rundt
+
+Farge (#2c2c2c)
+
+Farge på lenken (#ff503b)
+
+Stiplet understreking på lenken
 
 ---
+
+class: yellow
 
 # Oppgave 
 
 ## 2) Style typografien under "Våre tjenester"
 
-- Linjeavstand
-- Font
-- Skriftstørrelse
-- Farge
+Linjeavstand
+
+Font
+
+Skriftstørrelse
+
+Farge
 
 ---
+
+class: yellow
 
 # Oppgave 
 
 ## 3) Gi riktig utseende til selve siden
 
-- Hvit bakgrunn + bakgrunnsbilde på innholdet
-- Grå bakgrunn på resten 
-- Skygge på innholdet
-- Svart bakgrunn og hvit tekst på footer
+Hvit bakgrunn + bakgrunnsbilde på innholdet
+
+Grå bakgrunn på resten 
+
+Skygge på innholdet
+
+Svart bakgrunn og hvit tekst på footer
 
 ---
+
+class: yellow
 
 # Oppgave
 
 ## 4) Gi riktig utseende til innholdet i article-taggene under "Selvskryt"
 
-- Svart bakgrunn på overskriftene
-- Luft rundt overskriftene
-- Midtstilt tekst
+Svart bakgrunn på overskriftene
+
+Luft rundt overskriftene
+
+Midtstilt tekst
 
 ---
+
+class: yellow
 
 # Oppgave
 
 ## 5) Gi riktig utseende til seksjonsheadingene
 
-- Svart bakgrunn
-- Riktig font (Helvetica Neue)
-- Hvit tekst
-- Skygge
-- Ingen border
+Svart bakgrunn
+
+Riktig font (Helvetica Neue)
+
+Hvit tekst
+
+Skygge
+
+Ingen border
 
 ---
- 
+
+class: yellow
+
 # Oppgave
 
 ## 6) Style menyknappene
 
-- Mørk grå (#2c2c2c) bakgrunn
-- Riktig typografi
-- Tynn linje mellom knappene
-- Ikoner som bakgrunnsbilder
-- Aktivt menypunkt skal være rødt ("#ff503b")
-- Skjul teksten under "Hjem" (men menypunktet skal fortsatt være klikkbart! Tips: text-indent: -9999px;)
+Mørk grå (#2c2c2c) bakgrunn
+
+Riktig typografi
+
+Tynn linje mellom knappene
+
+Ikoner som bakgrunnsbilder
+
+Aktivt menypunkt skal være rødt ("#ff503b")
+
+Skjul teksten under "Hjem" (men menypunktet skal fortsatt være klikkbart! Tips: text-indent: -9999px;)
 
 ---
+
+class: yellow
 
 # Oppgave
 
 ## 7) Lag en transition i menyen
 
-- F.eks. ved fargeskifte på bakgrunn ved hover
+F.eks. ved fargeskifte på bakgrunn ved hover
 
 ---
+
+class: yellow
 
 # Oppgave
 
-## 8) Gi rikitg utseende til forrige/neste-knappene i bildegalleriet
+## 8) Gi riktig utseende til forrige/neste-knappene i bildegalleriet
 
-- Bakgrunnsbilde
-- Nøyaktig posisjonering
-- Skjul teksten med text-indent: -9999px;
-- Bakgrunnsfarge: #2c2c2c
+Bakgrunnsbilde
+
+Nøyaktig posisjonering
+
+Skjul teksten med text-indent: -9999px;
+
+Bakgrunnsfarge: #2c2c2c
 
 ---
 
-class: middle center fullscreen
+class: middle center fullscreen yellow
 
   # <a href="../04-responsive/responsive-presentasjon.html">Klikk for neste presentasjon</a>
 
 
 
     </textarea>
+
+
 <script src="../remark/remark-0.5.3.min.js" type="text/javascript"></script>
     <script type="text/javascript">
       var hljs = remark.highlighter.engine;
