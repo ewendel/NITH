@@ -71,3 +71,11 @@ blockquote { font-style: italic; font-weight: 300; }
 .halfsized img {
         width: 50%;
 }
+
+body {
+        font-size: 20px;
+}
+
+code {
+        font-size: 14px;
+}

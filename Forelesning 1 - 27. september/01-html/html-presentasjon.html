@@ -50,7 +50,7 @@ Utvikler mobilbank hos SpareBank1
 
 I mobilfaggruppen i BEKK
 
-<3 gitar, squash og webutvikling
+< 3 gitar, squash og webutvikling
 
 ---
 
@@ -58,21 +58,22 @@ class: middle center
 
 # Mål
 
-lære HTML, CSS og JavaScript for å kunne lage sin egen webapp
+lære nok HTML, CSS og JavaScript til å lage en klikkbar prototype av en webapp
 
 ---
 
+
 # Agenda
 
-Nettleseren
+## Nettleseren
 
-HTML
+## HTML
 
-CSS
+## CSS
 
-Responsivt design
+## Responsivt design
 
-JavaScript
+## JavaScript
 
 ---
 
@@ -80,7 +81,7 @@ class: middle center
 
 # FØRST: GITHUB!
 
-## http://is.gd/gspkurs
+## http://is.gd/gsdesign
 
 ---
 
@@ -107,13 +108,13 @@ class: middle center
 
 # Mozilla Firefox
 
-#Opera
+# Opera
 
-#Safari
+# Safari
 
-#Chrome
+# Chrome
 
-#...og IE
+# ...og IE
 
 .source[http://en.wikipedia.org/wiki/History_of_the_web_browser ]
 
@@ -127,16 +128,7 @@ class: middle center
 
 class: middle center
 
-#Utfordring: Browserkompabilitet!
-
----
-
-class: fullscreen middle
-![](../img/browser_uglysite.jpeg)
-
-???
-
-...og dette har vært en utfordring fra dag 1
+# Utfordring: Browserkompabilitet!
 
 ---
 
@@ -169,28 +161,29 @@ class: fullscreen middle inverse
 
 class: middle
 
-xml
-<noscript>
-  Nettleseren støtter ikke JavaScript. Synd for deg. Snakkes!
-</noscript>
+&nbsp;
 
+    <noscript>
+      Nettleseren støtter ikke JavaScript. Synd for deg. Snakkes!
+    </noscript>
 
 ---
 
 class: middle
 
-xml
-<script src="fancy-pants-supercool-flyout-menu.js"></script>
-<noscript>
-  <ul>
-      <li>
-          <a href="side1.htm">Side 1</a>
-      </li>
-      <li>
-          <a href="side2.htm">Side 2</a>
-      </li>
-  </ul>
-</noscript>
+&nbsp;
+
+    <script src="fancy-pants-supercool-flyout-menu.js"></script>
+    <noscript>
+      <ul>
+          <li>
+              <a href="side1.htm">Side 1</a>
+          </li>
+          <li>
+              <a href="side2.htm">Side 2</a>
+          </li>
+      </ul>
+    </noscript>
 
 
 ---
@@ -392,17 +385,18 @@ class: fullscreen
 
 ---
 
-class: middle center
-
 # HEAD
 
 Inneholder metadata og includes
 
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Type" 
+              content="text/html; charset=utf-8" />
         <title>My Awesome Web App</title>
-        <script src="scripts.js" type="text/javascript"></script>
-        <link href="https://github.com/stylesheet.css" type="text/css" rel="stylesheet"/>
+        <script src="scripts.js" type="text/javascript">
+        </script>
+        <link href="https://github.com/stylesheet.css" 
+              type="text/css" rel="stylesheet"/>
     </head>
 
 ---
@@ -432,6 +426,56 @@ Inneholder metadata og includes
 
     // Annet
     blockquote, cite, code
+
+---
+
+# Eksempelside
+
+        <!doctype html>
+        <header>
+            <h1>Velkommen</h1>
+            <nav>
+              <ul>
+                <li>
+                  <a href="/main.html">Side2</a>
+                </li>
+                <li>
+                  <a href="/signup.html">Side2</a>
+                </li>
+            </nav>
+        </header>
+        <main>
+            <article>En artikkel</article>
+        </main>
+        <aside>Sidebar</aside>
+        <footer> 
+          <form>
+            <input type="text" placeholder="Skriv epostadressen din her"/>
+            <input type="submit" value="Jeg vil ha nyhetsbrev" />
+          </form>
+        </footer>
+
+---
+
+# Mobiltriks
+
+    <meta name="apple-mobile-web-app-capable"
+      content="yes" />
+
+    <meta name="apple-mobile-web-app-status-bar-style"
+    content="default" /> // default, black, translucent
+
+    <meta name="viewport"
+    content="user-scalable=no, width=device-width" />
+
+    <link rel="apple-touch-icon"
+      href="./apple-touch-icon.png" />
+
+    <link rel="apple-touch-startup-image"
+      href="./startup.png" />
+
+    <html manifest="cache.manifest">
+
 
 ---
 
