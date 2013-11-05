@@ -55,6 +55,71 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Forelesning 1 - 27. september/01-html/html-presentasjon.html",
+			"settings":
+			{
+				"buffer_size": 9659,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Forelesning 1 - 27. september/02-cssintro/cssintro-presentasjon.html",
+			"settings":
+			{
+				"buffer_size": 31087,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Forelesning 1 - 27. september/03-cssdesign/cssdesign-presentasjon.html",
+			"settings":
+			{
+				"buffer_size": 14002,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Forelesning 1 - 27. september/04-responsive/responsive-presentasjon.html",
+			"settings":
+			{
+				"buffer_size": 7825,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Forelesning 1 - 27. september/05-javascript/del1/javascript-intro.html",
+			"settings":
+			{
+				"buffer_size": 15548,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Forelesning 1 - 27. september/05-javascript/del2/javascript-dom.html",
+			"settings":
+			{
+				"buffer_size": 13172,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Dev/frontend101/kurs1/del1/presentasjon/index.html",
+			"settings":
+			{
+				"buffer_size": 31385,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Forelesning 1 - 27. september/remark/kimjoe.css",
+			"settings":
+			{
+				"buffer_size": 2294,
+				"line_ending": "Windows",
+				"name": "h1, h2, h3 { font-family: 'Dosis', sans-serif; }"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -154,7 +219,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -169,6 +234,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"- ",
+			"# farger",
+			"# Farger",
+			"#Farger",
+			"Farger",
+			"POsition",
+			"  * ",
+			"#f",
+			"box-sizing",
+			"class=\"css-example\"",
+			"hl-text",
+			"gangnam",
+			"```",
+			"ntnu",
+			"* ",
 			"foodWrapper",
 			"foodwrapper",
 			"renderApp",
@@ -197,6 +277,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"\\n",
+			"",
+			"class=\"\"",
+			"",
 			"render",
 			"nav"
 		],
@@ -209,14 +294,248 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Forelesning 1 - 27. september/01-html/html-presentasjon.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								9659
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8414.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Forelesning 1 - 27. september/02-cssintro/cssintro-presentasjon.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 31087,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21216,
+								21216
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 13372.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Forelesning 1 - 27. september/03-cssdesign/cssdesign-presentasjon.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14002,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10138,
+								10138
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9957.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Forelesning 1 - 27. september/04-responsive/responsive-presentasjon.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7825,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7048,
+								6924
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7308.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Forelesning 1 - 27. september/05-javascript/del1/javascript-intro.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14599,
+								14599
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 15569.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Forelesning 1 - 27. september/05-javascript/del2/javascript-dom.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								522,
+								522
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Dev/frontend101/kurs1/del1/presentasjon/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 31385,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5424,
+								6247
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3174.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Forelesning 1 - 27. september/remark/kimjoe.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2294,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1399,
+								1399
+							]
+						],
+						"settings":
+						{
+							"auto_name": "h1, h2, h3 { font-family: 'Dosis', sans-serif; }",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -248,7 +567,7 @@
 	"project": "NITH.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
