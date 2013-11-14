@@ -56,59 +56,22 @@
 	"buffers":
 	[
 		{
-			"file": "Forelesning 1 - 27. september/01-html/html-presentasjon.html",
+			"file": "Forelesning 2 - 5. november/del1/javascript-intro.html",
 			"settings":
 			{
-				"buffer_size": 9659,
+				"buffer_size": 14932,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Forelesning 1 - 27. september/02-cssintro/cssintro-presentasjon.html",
+			"contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />\n    <title>Mobile web apps - Kurs i grensesnittsprogrammering</title>\n    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>\n    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400|Dosis:300,400|Source+Code+Pro:200,300,400,400bold' rel='stylesheet' type='text/css'>\n    <link rel=\"stylesheet\" href=\"remark/kimjoe.css\">\n    <style type=\"text/css\" media=\"screen\">\n\n      .jquery { background-color: #1E2837; }\n\n    </style>\n  </head>\n  <body>\n    <textarea id=\"source\">\n\nclass: middle center orange\n\n# Dag 3: Webapps for mobile\n\nGrensesnittsdesign<br>\nFredag 15. nov 2013<br>\nErik Wendel<br>\n<span style=\"font-size: 14px; text-decoration: none !important;\">(is.gd/nith_dag3)</span>\n\n---\n\nclass: agenda orange\n\n# Agenda\n\n- Oppsett av app\n- Getting SPA-ed\n- Metatags, input types\n- Touch events\n- localStorage\n- jQuery Mobile\n\n---\n\n# Single Page Apps\n\n        <section id=\"about\">...</section>\n        <section id=\"newsfeed\">...</section>\n        <section id=\"news active\">...</section>\n        <nav>\n            <ul>\n                <li class=\"about\">About</li>\n                <li class=\"news\">News</li>\n            </ul>\n        </nav>\n\n        <style>\n            section { display: none; }\n            .active { display: block; }\n        </style>\n\n        <script type=\"text/javascript\">\n            $('section').on('click', function() {\n                $('.active').removeClass('active');\n                $(this).addClass('active');\n            })\n        </script>\n\n---\n\n# Metatags\n\n    // Hindrer brukeren i skalere siden ved å \"pinche\"\n    // Setter bredden av siden til bredden av devicen\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n\n    // Lar deg legge til siden som app på iPhone\n    <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n\n    // Lar deg style status baren\n    <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\">\n\n    \n---\n\n# Touch vs click events\n\n        touchend\n        touchstart\n        touchup\n        touchdown\n\n---\n\n# Local Storage\n\n        localStorage.setItem('mykey', 'myvalue');\n        localStorage.getItem('mykey'); // returns 'myvalue'\n        localStorage.setItem('mykey', null),\n        localStorage.clear();\n\n---\n\nBootstrap\n\n\n    </textarea>\n    <script src=\"http://gnab.github.com/remark/downloads/remark-0.5.3.min.js\" type=\"text/javascript\"></script>\n    <script type=\"text/javascript\">\n      var hljs = remark.highlighter.engine;\n    </script>\n    <script src=\"js/remark.language.js\" type=\"text/javascript\"></script>\n    <script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\" type=\"text/javascript\"></script>\n    <script type=\"text/javascript\">\n      var slideshow = remark.create({\n          highlightStyle: 'solarized_light',\n          highlightLanguage: 'remark'\n        }) ;\n      var a = [];\n      slideshow.addListener(\"slidein\",function(b,c){if(a.indexOf(c)>-1)return;var d=$(b);d.find(\"p:empty\").remove(),d.find(\".front-page\").length===0&&d.find(\"h1\").wrapInner(\"<span>\"),d.find(\".pushed img\").parent().wrapInner(\"<span class='img'>\"),a.push(c)})\n    </script>\n  </body>\n</html>\n",
+			"file": "Forelesning 3 - 15. november/webapps.html",
+			"file_size": 3115,
+			"file_write_time": 130289300560705573,
 			"settings":
 			{
-				"buffer_size": 31087,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Forelesning 1 - 27. september/03-cssdesign/cssdesign-presentasjon.html",
-			"settings":
-			{
-				"buffer_size": 14002,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Forelesning 1 - 27. september/04-responsive/responsive-presentasjon.html",
-			"settings":
-			{
-				"buffer_size": 7825,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Forelesning 1 - 27. september/05-javascript/del1/javascript-intro.html",
-			"settings":
-			{
-				"buffer_size": 15548,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Forelesning 1 - 27. september/05-javascript/del2/javascript-dom.html",
-			"settings":
-			{
-				"buffer_size": 13172,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Dev/frontend101/kurs1/del1/presentasjon/index.html",
-			"settings":
-			{
-				"buffer_size": 31385,
-				"line_ending": "Unix"
+				"buffer_size": 3338,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -116,8 +79,23 @@
 			"settings":
 			{
 				"buffer_size": 2294,
-				"line_ending": "Windows",
-				"name": "h1, h2, h3 { font-family: 'Dosis', sans-serif; }"
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Forelesning 2 - 5. november/del2/javascript-dom.html",
+			"settings":
+			{
+				"buffer_size": 13270,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Forelesning 2 - 5. november/del3/javascript-ajax.html",
+			"settings":
+			{
+				"buffer_size": 5810,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -149,6 +127,16 @@
 	},
 	"file_history":
 	[
+		"/C/Dev/NITH/Forelesning 1 - 27. september/01-html/html-presentasjon.html",
+		"/C/Dev/NITH/Forelesning 2 - 5. november/del2/javascript-dom.html",
+		"/C/Dev/FrontendBootcamp/05-javascript/del1/javascript-intro.html",
+		"/C/Dev/NITH/Forelesning 1 - 27. september/remark/kimjoe.css",
+		"/C/Dev/frontend101/kurs1/del1/presentasjon/index.html",
+		"/C/Dev/NITH/Forelesning 1 - 27. september/05-javascript/del2/javascript-dom.html",
+		"/C/Dev/NITH/Forelesning 1 - 27. september/05-javascript/del1/javascript-intro.html",
+		"/C/Dev/NITH/Forelesning 1 - 27. september/04-responsive/responsive-presentasjon.html",
+		"/C/Dev/NITH/Forelesning 1 - 27. september/03-cssdesign/cssdesign-presentasjon.html",
+		"/C/Dev/NITH/Forelesning 1 - 27. september/02-cssintro/cssintro-presentasjon.html",
 		"/C/Dev/NITH/Forelesning 1 - 27. september/04-responsive/oppgave/start-responsive.html",
 		"/C/Dev/NITH/Forelesning 1 - 27. september/01-html/oppgaver/start-html.html",
 		"/C/Dev/FrontendBootcamp/01-html/html-presentasjon.html",
@@ -238,6 +226,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"../../img",
+			"skop",
+			"Helge",
+			"Helge Fredheim",
+			"grey",
+			"../../img/",
 			"- ",
 			"# farger",
 			"# Farger",
@@ -281,6 +275,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"../img",
+			"scope",
+			"Erik",
+			"Erik Wendel",
+			"../img/",
 			"",
 			"\\n",
 			"",
@@ -298,16 +297,16 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Forelesning 1 - 27. september/01-html/html-presentasjon.html",
+					"file": "Forelesning 2 - 5. november/del1/javascript-intro.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9659,
+						"buffer_size": 14932,
 						"regions":
 						{
 						},
@@ -315,197 +314,52 @@
 						[
 							[
 								0,
-								9659
+								14932
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 8414.0,
+						"translation.y": 81.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Forelesning 1 - 27. september/02-cssintro/cssintro-presentasjon.html",
+					"file": "Forelesning 3 - 15. november/webapps.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 31087,
+						"buffer_size": 3338,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								21216,
-								21216
+								2206,
+								2206
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13372.0,
+						"translation.y": 863.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "Forelesning 1 - 27. september/03-cssdesign/cssdesign-presentasjon.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14002,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10138,
-								10138
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 9957.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Forelesning 1 - 27. september/04-responsive/responsive-presentasjon.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7825,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7048,
-								6924
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7308.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Forelesning 1 - 27. september/05-javascript/del1/javascript-intro.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15548,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14599,
-								14599
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 15569.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Forelesning 1 - 27. september/05-javascript/del2/javascript-dom.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13172,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								522,
-								522
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/Dev/frontend101/kurs1/del1/presentasjon/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 31385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5424,
-								6247
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3174.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "Forelesning 1 - 27. september/remark/kimjoe.css",
 					"semi_transient": false,
 					"settings":
@@ -517,19 +371,76 @@
 						"selection":
 						[
 							[
-								1399,
-								1399
+								849,
+								855
 							]
 						],
 						"settings":
 						{
-							"auto_name": "h1, h2, h3 { font-family: 'Dosis', sans-serif; }",
 							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 8,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 648.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Forelesning 2 - 5. november/del2/javascript-dom.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13270,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11385,
+								11385
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1008.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Forelesning 2 - 5. november/del3/javascript-ajax.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5810,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1288,
+								1288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 642.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -579,6 +490,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"kimjoe",
+				"Forelesning 1 - 27. september\\remark\\kimjoe.css"
+			],
 			[
 				"foodwrapp",
 				"js/models/foodWrapper.js"

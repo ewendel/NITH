@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Mobile web apps - Kurs i grensesnittsprogrammering</title>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400|Dosis:300,400|Source+Code+Pro:200,300,400,400bold' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="remark/kimjoe.css">
+    <style type="text/css" media="screen">
+
+      .jquery { background-color: #1E2837; }
+      .img-center img {
+        width: 25%;
+        display: block;
+        margin: 0 auto;
+      }
+      .img-inline .imgs {
+        text-align: center;
+      }
+      .agenda ul {
+        padding-left: 0px;
+      }
+      .agenda li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: middle center orange
+
+# Dag 3: Webapps for mobile
+
+Grensesnittsdesign<br>
+Fredag 15. nov 2013<br>
+Erik Wendel<br>
+<span style="font-size: 14px; text-decoration: none !important;">(is.gd/nith_dag3)</span>
+
+---
+
+class: middle center orange
+
+# MÅL: lage en klikkbar prototype
+
+--
+
+## som har minst tre view
+
+--
+
+## som benytter lagring
+
+--
+
+## som er dynamisk
+
+---
+
+class: agenda
+
+# Agenda
+
+- ### Oppsett av app
+- ### Getting SPA-ed
+- ### Mobiloptimalisering: metatags, input types
+- ### Events: click vs touch
+- ### Lagring: LocalStorage
+- ### Designrammeverk
+- ### Frivillig: MVC-rammeverk, AMD-loader, minifisering
+
+---
+
+class: agenda
+
+# Oppsett
+
+- ### All markup i index.html
+- ### Inkludering av JS, CSS og eksterne rammeverk/bibliotek
+- ### Husk å start appen i document.ready
+- ### [Oppsett av webserver](https://github.com/ewendel/node-webserver)
+- ### [Lag repo på GitHub](https://help.github.com/articles/create-a-repo)
+- ### Frivillig: [deploy til Heroku](https://devcenter.heroku.com/articles/quickstart)
+
+
+---
+
+# Single Page Apps
+
+        <section class="about">...</section>
+        <section class="showall">...</section>
+        <section class="news active">...</section>
+        <nav>
+            <ul>
+                <li class="about">About</li>
+                <li class="news">News</li>
+            </ul>
+        </nav>
+
+        <style>
+            section { display: none; }
+            .active { display: block; }
+        </style>
+
+        <script type="text/javascript">
+            $('section').on('click', function() {
+                $('.active').removeClass('active');
+                $(this).addClass('active');
+            })
+        </script>
+
+---
+
+# Metatags
+
+    // Hindrer brukeren i skalere siden ved å "pinche"
+    // Setter bredden av siden til bredden av devicen
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    // Lar deg legge til siden som app på iPhone
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    // Lar deg style status baren
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    // App-ikoner
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-startup-image" href="/splash-startup.png">
+---
+
+class:  img-inline
+
+# HTML5 Inputtyper
+
+        <input type="search">
+        <input type="email">
+        <input type="url">
+        <input type="tel">
+        <input type="number">
+        <input type="date">
+<div class="imgs">
+![type-url](img/type-url.png)
+![type-email](img/type-email.png)
+![type-tel](img/type-tel.png)
+</div>
+
+Mer informasjon: [html5doctor.com/html5-forms-input-types/](http://html5doctor.com/html5-forms-input-types/)
+
+---
+
+# Touch vs click events
+
+        $('body').on('click', function(event) {
+          event.preventDefault();
+        }, false);
+
+Vi kan bruke <i>touchstart</i>, <i>touchmove</i> og <i>touchend</i>
+
+        // Disable scrolling
+        $('body').on('touchmove', function(event) {
+          event.preventDefault();
+        }, false);
+
+Mer informasjon: [www.html5rocks.com/en/mobile/touch/](http://www.html5rocks.com/en/mobile/touch/)
+
+og her: [developers.google.com/mobile/articles/fast_buttons](https://developers.google.com/mobile/articles/fast_buttons)
+
+---
+
+# Local Storage
+        // Lagre
+        localStorage.setItem('mykey', 'myvalue');
+        // Hente
+        localStorage.getItem('mykey'); // returns 'myvalue'
+        // Fjerne
+        localStorage.setItem('mykey', null),
+        // Fjerne alle
+        localStorage.clear();
+
+Local Storage lagrer kun strenger.
+
+        JSON.parse()
+
+        JSON.stringify()
+
+---
+
+class: center img-center
+
+# Designelementer & rammeverk
+
+[![bootstrap](img/bootstrap.png)](http://getbootstrap.com/)
+[![jqmobile](img/jqmobile.png)](http://www.jquerymobile.com)
+
+
+    </textarea>
+    <script src="http://gnab.github.com/remark/downloads/remark-0.5.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="js/remark.language.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+          highlightStyle: 'solarized_light',
+          highlightLanguage: 'remark'
+        }) ;
+      var a = [];
+      slideshow.addListener("slidein",function(b,c){if(a.indexOf(c)>-1)return;var d=$(b);d.find("p:empty").remove(),d.find(".front-page").length===0&&d.find("h1").wrapInner("<span>"),d.find(".pushed img").parent().wrapInner("<span class='img'>"),a.push(c)})
+    </script>
+  </body>
+</html>
