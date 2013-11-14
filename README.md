@@ -1,4 +1,7 @@
-NITH
+Grensesnittsdesign ved NITH
+
+Tredelt introduksjonskurs i frontendutvikling holdt ved NITH høsten 2013 av Erik Wendel.
+
 ====
 
 # Dag 1: Markup og styling
@@ -29,12 +32,12 @@ Også her sørger vi for å holde presentasjonsøktene korte og putter inn prakt
 
 Her går vi igjennom metoder for å utvikle webapps og hvordan vi kan tilpasse appene våre spesielt for mobil.
 
-- Metatags
-- Input types - tel, text
-- Lytte på touchevents
-- Single Page App med all markup i DOM-en og skjule/vise med CSS
-- Designbibliotek - Bootstrap eller jQuery Mobile
-- Bruke localStorage som backend
+- Oppsett av app, GitHub repo, evt deploy til Heroku
+- Mobiloptimalisering: metatags, input types
+- Events: click vs touch
+- Single Page App-metoder
+- Designbibliotek - Bootstrap & jQuery Mobile
+- Lagring: Local Storage
  
 Inspirasjon til videre hacking:
 - strukturere koden med et MVC-rammeverk (Backbone.js)
