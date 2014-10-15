@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>AJAX - Kurs i grensesnittsprogrammering</title>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400|Dosis:300,400|Source+Code+Pro:200,300,400,400bold' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../remark/kimjoe.css">
+    <style type="text/css" media="screen">
+
+      .jquery { background-color: #1E2837; }
+      .nodejs { background-color: #3F4239; }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: fullscreen
+
+![CSS](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/ajax.png)
+
+<div class="overlay loud" style="text-align: center; top: 70%">
+<p>
+    JavaScript med AJAX
+    <small style="display:block;">Del 7: mer javascript</small>
+</p>
+</div>
+
+---
+
+class: middle center
+
+Hvordan slipper Gmail å laste siden på nytt når du åpner en epost?
+
+---
+
+class: middle center
+
+#AJAX
+
+&nbsp;
+
+---
+
+class: middle center
+
+#AJAX
+
+Send og motta data i bakgrunnen
+
+---
+
+# AJAX
+
+* Asynkron javascript og XML
+* Motta data i forskjellige formater (XML, tekst, JSON, HTML)
+* Send data
+* Skjer ved hjelp av XMLHttpRequest-objektet
+
+---
+
+class: middle center
+
+[![devtools](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/devtools.jpg)](http://jsbin.com/nepati/3/edit)
+
+---
+
+class: middle center
+
+![wtf](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/wtf.gif)
+
+---
+
+class: middle center jquery
+
+![jQuery](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/jquery_logo.png)
+
+
+
+<em style="color:white">…igjen</em>
+
+---
+
+# AJAX
+
+Ajax med jQuery:
+
+    $.ajax({
+
+      url: 'http://bekk.no/api',
+
+      success: function(data) {
+          console.log(data);
+      },
+
+      error: function() {
+          alert("There was a problem with the request!");
+      }
+
+    });
+
+---
+
+class: middle center
+
+#Same origin policy
+
+&nbsp;
+
+---
+
+# Ajax
+
+## Same origin policy
+
+    Samme domene
+    // bekk.no
+
+--
+
+    Samme protokoll
+    // http://bekk.no
+
+--
+
+    Samme port
+    // http://bekk.no:80
+
+
+---
+
+# Ajax
+
+##Cross-origin resource sharing
+
+Klienten sender origin header
+
+    Origin: http://www.bekk.no
+
+--
+
+Server analyser requesten
+
+--
+
+og returnerer header
+
+    Access-Control-Allow-Origin: http://www.bekk.no
+
+--
+
+eller
+
+    Access-Control-Allow-Origin: *
+
+---
+
+class: middle center
+
+#Representational state transfer
+
+--
+
+REST
+
+---
+
+class: middle center
+
+![rest struktur](../resources/rest-structure.png)
+
+
+
+
+---
+
+# REST - http verb
+
+
+    http://bekk.no/ansatte
+
+--
+
+###GET
+List the URIs and perhaps other details of the collection's members.
+
+--
+
+###PUT
+Replace the entire collection with another collection.
+
+--
+
+###POST
+Create a new entry in the collection. The new entry's URI is assigned automatically and is usually returned by the operation.
+
+--
+
+###DELETE
+Delete the entire collection.
+
+
+
+[wikipedia](http://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services)
+
+
+---
+
+# REST - http verb
+
+    http://bekk.no/ansatte/erikwendel
+
+--
+
+###GET
+Retrieve a representation of the addressed member of the collection, expressed in an appropriate Internet media type.
+
+--
+
+###PUT
+Replace the addressed member of the collection, or if it doesn't exist, create it.
+
+--
+
+###POST
+Not generally used.
+
+--
+
+###DELETE
+Delete the addressed member of the collection.
+
+
+
+[wikipedia](http://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services)
+
+
+---
+
+# REST - utvekslingsformat
+
+## JSON: JavaScript Object Notation
+
+    // Server returnerer følgende (som en streng)
+    '{data: [{navn: "Kent", alder: 29}, {navn: "Erik", alder: 26}]}'
+
+--
+
+    //JavaScript konverterer det til et objekt:
+    {
+        data: [
+        {
+            navn: "Kent",
+            alder: 29
+        },
+        {
+            navn: "Erik",
+            alder: 26
+        }]
+    }
+
+--
+### Under huden
+
+    JSON.parse('{data: [{navn: "Kent", alder: 29}, {navn: "Erik", alder: 26}]}')
+
+
+---
+
+class: center middle
+
+[![devtools](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/devtools.jpg)](http://jsbin.com/lojej/3/edit)
+
+---
+
+class: yellow
+
+#Oppgaver
+
+## Vi har satt opp en service på **rest-images.herokuapp.com**
+
+
+* http://rest-images.herokuapp.com/ (gir random query-ord)
+* http://rest-images.herokuapp.com/:query
+
+returnerer følgende struktur
+
+    {
+        "query":"Erik Wendel",
+        "images":[{
+            "url":"http://bilder.no/ew.jpg",
+            "thumb":"http://bilder.no/ewt.jpg",
+            "description":"Hr. Wendel"
+        }, (...)  ]
+    }
+
+---
+
+class: yellow
+
+#Oppgaver
+
+##Bildekarusell med ajax!
+Ta utgangspunkt i [bildegalleri.html](oppgave/bildegalleri.html)
+
+1. Hent ut søkeord når bruker trykker enter i inputfeltet
+2. Gjør et kall mot **rest-images.herokuapp.com**, logg responsen.
+3. Bygg en HTML-streng med thumbnails og sett den inn i **.image-gallery .thumbs**
+
+Prøv å løse oppgaven uten å se på [løsningsforslaget](løsningsforslag/bildegalleri-løsning.html)
+
+---
+
+class: center middle
+
+# Eventer
+
+---
+
+class: center middle
+
+![events](../resources/events.png)
+
+---
+
+class: center middle
+
+![events](../resources/buttons.jpg)
+
+---
+
+# Eventer
+
+
+    $("a").on("click", function() {
+
+    });
+
+--
+
+    $(document).on("click", "a", function() {
+        // smartere
+    });
+
+
+---
+
+class: center middle
+
+# Timing
+
+---
+
+# Timing
+
+
+## La oss gjøre det nå!
+<button onclick="javascript:alert('clicked I have been')">click me!</button>
+
+--
+
+## Eventuellt vente litt
+<button onclick="javascript:window.timeId=setTimeout(function(){alert('clicked I have been')},3000)">click me in three sec!</button>
+
+--
+
+## Jeg trur ikke vi gidder
+<button onclick="javascript:clearTimeout(window.timeId)">NONO turn it off</button>
+
+
+---
+
+# Timing
+
+## Utsette ting
+    setTimeout(function() {
+        alert("clicked I have been");
+    }, 3000);
+
+--
+
+## Avbryte ting
+
+    var timerId = setTimeout(function() {
+        alert("clicked I have been");
+    }, 3000);
+
+    clearTimeout(timerId);
+
+
+---
+
+# Timing quiz
+
+
+    console.log("It's going to be");
+
+
+    setTimeout(function() {
+        console.log("dary");
+    }, 3000);
+
+
+
+    setTimeout(function() {
+        console.log("legen");
+    }, 200);
+
+
+
+    setTimeout(function() {
+        console.log("wait for it..");
+    }, 1000);
+
+Hva blir skrevet ut i konsollet?
+
+
+--
+
+    It's going to be
+    legen
+    wait for it.
+    dary
+
+---
+
+class: yellow
+
+#Oppgaver
+
+##Fortsett på bildekarusellen
+
+1. Hent ut søkeord uten at brukeren har trykket enter
+2. Pass på å ikke gjøre unødvendige kall,
+    *hint: vent til brukeren er ferdig med å trykke*
+3. Vis stor versjon av første bilde i **.image-gallery .featured**
+4. Bytt til neste bilde etter 10 sec
+3. Vis stor versjon brukeren trykker på en av thumbnail
+
+Prøv å løse oppgaven uten å se på [løsningsforslaget](løsningsforslag/bildegalleri-løsning.html)
+
+---
+
+
+class: center middle
+
+#Struktur
+
+---
+
+# Recap
+
+    var Person = function (navn, stilling, firma) {
+        this.navn = navn;
+        this.stilling = stilling;
+        this.firma = firma;
+    };
+
+    var pat = new Person("Pat", "postmann", "Posten");
+    var nils_arne = new Person("Nils Arne", "trener", "Rosenborg");
+
+    Person.prototype.hils = function() {
+        console.log("Hei, jeg heter " + this.navn);
+    }
+
+    nils_arne.hils(); // "Hei, jeg heter Nils Arne"
+    pat.hils(); // "Hei, jeg heter Pat"
+
+    pat.katt = "Miss";
+
+---
+
+# JS Moduler
+
+    this === window // true
+
+    var Person = function (navn, stilling, firma) {
+        this === window // false
+    };
+
+    var pat = new Person("Pat", "postmann", "Posten");
+
+---
+
+# JS Moduler
+
+    this === window // true
+
+    var Person = function (navn, stilling, firma) {
+        this === window // false
+    };
+
+    var pat = new Person("Pat", "postmann", "Posten");
+
+Når noe er instansiert, vil this (nesten) alltid være instansen av objektet
+
+---
+
+
+# JS Moduler
+
+## Vi kan sette variabler på this
+
+    var Person = function (navn, stilling, firma) {
+        this.langNese === true;
+
+        this.finMetode = function() {
+            ....
+        };
+    };
+
+    var pat = new Person("Pat", "postmann", "Posten");
+    pat.langNese // true
+
+
+---
+
+
+# JS Moduler
+
+## Vi kan sette variabler på this
+
+    var Person = function (navn, stilling, firma) {
+        this.langNese === true;
+
+        this.finMetode = function() {
+            ....
+        };
+    };
+
+    var pat = new Person("Pat", "postmann", "Posten");
+    pat.langNese // true
+
+Alt på this er public metoder
+
+---
+
+# JS Moduler
+
+## Hva med private metoder?
+
+
+---
+
+# JS Moduler
+
+## Hva med private metoder?
+
+    var Person = (function() {
+
+        var finPrivatMetode = function(navn) {
+            return navn === "Pat";
+        };
+
+        var Person = function (navn, stilling, firma) {
+            var langNese = finPrivatMetode.call(this, navn)
+
+        };
+
+        return Person;
+    })();
+
+    var pat = new Person("Pat", "postmann", "Posten");
+
+---
+
+
+class: center middle
+
+[![devtools](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/devtools.jpg)](http://jsbin.com/lojej/3/edit)
+
+
+---
+???
+
+class: yellow
+
+#Oppgaver
+
+## Refaktorer på bildekarusellen
+
+1. Bygg om bildekarusellen til en JS modul.
+2. Hent data utenfor modulen og send den inn via en public metode.
+3. **Hvis tid:** se på [jQuery deferred](http://api.jquery.com/category/deferred-object/) og prøv å implementere oppstart med promises.
+
+Prøv å løse oppgaven uten å se på [løsningsforslaget](løsningsforslag/bildegalleri-løsning-jsmodul.html)
+
+???
+
+
+---
+
+class: middle center yellow
+
+  # <a href="../08-oppgaver/presentasjon.html">Neste del</a>
+
+    </textarea>
+    <script src="http://gnab.github.com/remark/downloads/remark-0.5.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="js/remark.language.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+          highlightStyle: 'tomorrow',
+          highlightLanguage: 'javascript'
+        }) ;
+      var a = [];
+      slideshow.addListener("slidein",function(b,c){if(a.indexOf(c)>-1)return;var d=$(b);d.find("p:empty").remove(),d.find(".front-page").length===0&&d.find("h1").wrapInner("<span>"),d.find(".pushed img").parent().wrapInner("<span class='img'>"),a.push(c)})
+    </script>
+  </body>
+</html>
