@@ -4,9 +4,9 @@ Dette er en intro til grensesnittsutvikling på web gjennom tre workshops på We
 
 Kurset er delt opp i bolker, og hver bolk består av en presentasjon og minst én oppgave. På de fleste bolkene kommer det flere sett med oppgaver underveis, slik at man unngår langdryge deler med kun presentasjon. Vi tar den tiden vi trenger på hvert tema og prøver å porsjonere det ut slik at vi når gjennom alt stoffet på de tre øktene:
 
-onsdag 15. oktober 0815 - 1200
-onsdag 22. oktober 0815 - 1200
-onsdag 29. oktober 0815 - 1200
+* onsdag 15. oktober 0815 - 1200
+* onsdag 22. oktober 0815 - 1200
+* onsdag 29. oktober 0815 - 1200
 
 Den siste onsdagen blir etter planen hovedsaklig praktisk, hvor målet er å få dere igang med  å kode den tekniske innleveringen.
 
