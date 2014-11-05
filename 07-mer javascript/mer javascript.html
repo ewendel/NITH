@@ -104,60 +104,6 @@ Ajax med jQuery:
 
 class: middle center
 
-#Same origin policy
-
-&nbsp;
-
----
-
-# Ajax
-
-## Same origin policy
-
-    Samme domene
-    // bekk.no
-
---
-
-    Samme protokoll
-    // http://bekk.no
-
---
-
-    Samme port
-    // http://bekk.no:80
-
-
----
-
-# Ajax
-
-##Cross-origin resource sharing
-
-Klienten sender origin header
-
-    Origin: http://www.bekk.no
-
---
-
-Server analyser requesten
-
---
-
-og returnerer header
-
-    Access-Control-Allow-Origin: http://www.bekk.no
-
---
-
-eller
-
-    Access-Control-Allow-Origin: *
-
----
-
-class: middle center
-
 #Representational state transfer
 
 --
@@ -169,9 +115,6 @@ REST
 class: middle center
 
 ![rest struktur](../resources/rest-structure.png)
-
-
-
 
 ---
 
@@ -193,7 +136,7 @@ Replace the entire collection with another collection.
 --
 
 ###POST
-Create a new entry in the collection. The new entry's URI is assigned automatically and is usually returned by the operation.
+Create a new collection. The new entry's URI is assigned automatically and is usually returned by the operation.
 
 --
 
@@ -224,7 +167,7 @@ Replace the addressed member of the collection, or if it doesn't exist, create i
 --
 
 ###POST
-Not generally used.
+Create a new member in the collection.
 
 --
 
