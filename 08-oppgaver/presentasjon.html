@@ -22,32 +22,185 @@ class: fullscreen
 
 <div class="overlay loud" style="text-align: center; top: 70%">
 <p>
-    Frontendkurs: Dag 3
-    <small style="display:block;">HACK DAY</small>
+    Webapps for mobile
+    <small style="display:block;">Grensesnittdesign dag 3</small>
 </p>
 </div>
 
 ---
 
-class: agenda yellow
+class: middle center orange
+
+# MÅL: lage en klikkbar prototype
+
+--
+
+## som har minst tre view
+
+--
+
+## som benytter lagring
+
+--
+
+## som er dynamisk
+
+---
+
+class: agenda
 
 # Agenda
 
-<div style="position: absolute; bottom: 100px; left: 80px;">
+- ### Oppsett av app
+- ### Getting SPA-ed
+- ### Mobiloptimalisering: metatags, input types
+- ### Events: click vs touch
+- ### Lagring: LocalStorage
+- ### Designrammeverk
+- ### Frivillig: MVC-rammeverk, AMD-loader, minifisering
 
-### Restpresentasjon fra dag 2
-### Oppgave 1: Todoapp
-### Oppgave 2: Chatklient
-### Oppsummering av kurset
-### Kompetansebyggingen videre
+---
 
+class: agenda
+
+# Oppsett
+
+- ### All markup i index.html
+- ### Inkludering av JS, CSS og eksterne rammeverk/bibliotek
+- ### Husk å start appen i document.ready
+- ### [Oppsett av webserver](https://github.com/ewendel/node-webserver)
+- ### [Lag repo på GitHub](https://help.github.com/articles/create-a-repo)
+- ### Frivillig: [deploy til Heroku](https://devcenter.heroku.com/articles/quickstart)
+
+
+---
+
+# Single Page Apps
+
+        <section class="about">...</section>
+        <section class="showall">...</section>
+        <section class="news active">...</section>
+        <nav>
+            <ul>
+                <li class="about">About</li>
+                <li class="news">News</li>
+            </ul>
+        </nav>
+
+        <style>
+            section { display: none; }
+            .active { display: block; }
+        </style>
+
+        <script type="text/javascript">
+            $('section').on('click', function() {
+                $('.active').removeClass('active');
+                $(this).addClass('active');
+            })
+        </script>
+
+---
+
+# Metatags
+
+    // Hindrer brukeren i skalere siden ved å "pinche"
+    // Setter bredden av siden til bredden av devicen
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    // Lar deg legge til siden som app på iPhone
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    // Lar deg style status baren
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    // App-ikoner
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-startup-image" href="/splash-startup.png">
+---
+
+class:  img-inline
+
+# HTML5 Inputtyper
+
+        <input type="search">
+        <input type="email">
+        <input type="url">
+        <input type="tel">
+        <input type="number">
+        <input type="date">
+<div class="imgs">
+![type-url](img/type-url.png)
+![type-email](img/type-email.png)
+![type-tel](img/type-tel.png)
 </div>
+
+Mer informasjon: [html5doctor.com/html5-forms-input-types/](http://html5doctor.com/html5-forms-input-types/)
+
+---
+
+# Touch vs click events
+
+        $('body').on('click', function(event) {
+          event.preventDefault();
+        }, false);
+
+Vi kan bruke <i>touchstart</i>, <i>touchmove</i> og <i>touchend</i>
+
+        // Disable scrolling
+        $('body').on('touchmove', function(event) {
+          event.preventDefault();
+        }, false);
+
+Mer informasjon: [www.html5rocks.com/en/mobile/touch/](http://www.html5rocks.com/en/mobile/touch/)
+
+og her: [developers.google.com/mobile/articles/fast_buttons](https://developers.google.com/mobile/articles/fast_buttons)
+
+---
+
+# Local Storage
+        // Lagre
+        localStorage.setItem('mykey', 'myvalue');
+        // Hente
+        localStorage.getItem('mykey'); // returns 'myvalue'
+        // Fjerne
+        localStorage.setItem('mykey', null),
+        // Fjerne alle
+        localStorage.clear();
+
+Local Storage lagrer kun strenger.
+
+        JSON.parse()
+
+        JSON.stringify()
+
+---
+
+class: center img-center
+
+# Designelementer & rammeverk
+
+[![jqmobile](img/jqmobile.png)](http://www.jquerymobile.com)
+[![bootstrap](img/bootstrap.png)](http://getbootstrap.com/)
+
+---
+
+class: center img-center
+
+
+# Frivillig
+
+[![backbone](img/backbone.png)](http://www.backbonejs.com)
+[![underscore](img/underscore.png)](http://www.underscorejs.com)
+[![require](img/require.png)](http://www.requirejs.com)
+
 
 ---
 
 class: center
 
-# Oppgave 1: Todo-app
+# Todo-app
 
 <div style="width: 300px; margin: 0 auto;">
     ![code](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/todoapp.png)
@@ -60,109 +213,6 @@ class: center
 
 ---
 
-class: frontpage
-
-# Twitter 2.0
-
-### Rest endepunktene leverer JSONP og fungerer på følgende måte:
-  * [http://mac-erikwendel.local:3000/message](http://ios-course.herokuapp.com/message) (GET) <- alle beskjeder
-  * [http://mac-erikwendel.local:3000/message](http://ios-course.herokuapp.com/message) (POST) <- JSON i body
-  * [http://mac-erikwendel.local:3000/message/{id}](http://ios-course.herokuapp.com/message/{id}) (DELETE) <- Slette
-  * [http://mac-erikwendel.local:3000/message/{id}](http://ios-course.herokuapp.com/message/{id}) (PUT) <- Oppdatere
-
-
-    {
-      "from":      "unnamed",
-      "message":   "hello world",
-      "date":      "2012-10-18T17:43:48.011Z" // new Date() i javascript
-    }
-
-.center[<a href="oppgave2/oppgavetekst.txt" target="_blank">Oppgavebeskrivelse</a>]
-
-.center[<a href="oppgave2/twitter2.0.png" target="_blank">Skjermbilde</a>]
-
----
-
-class: middle center red
-
-# Oppsummering
-
-???
-
-Når man skal lære frontend på tre dager, sier det seg selv at det vil gå litt over stokk stein. Det er veldig mye å lære på veldig kort tid. Derfor prøver kurset å gi et solid fundament å bygge videre på, hvor vi har vært nøye på å bruke tid på de grunnleggende, viktige tingene. Derimot er det ingen som er ferdig utlært etter kurset, og dere vil lære masse på prosjekt i tiden fremover.
-
-Vi vil også minne om at verken Kent eller jeg er profesjonelle kursholdere og har stort sett snekret dette materialet på kveldstid. Det betyr at det vil forekomme noen hickups, noen gjenglemte kodelinjer i øvingene, noen lenker som ikke fungerer, etc. Likevel håper vi at dere har lært mye på disse dagene - det har ihvertfall sett veldig sånn ut.
-
----
-
-class: middle center red
-
-# Kompetansebyggingen videre
-
-???
-
-Her er noen forslag til hvordan man kan bygge kompetanse på frontend fremover.
-
-
----
-
-class: fullscreen
-
-![code](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/superhero.png)
-
----
-
-class: middle center
-
-![code](http://dbwebb.se/img/bok/javascript-the-good-parts.jpg)
-
----
-
-class: middle center
-
-![code](http://ecx.images-amazon.com/images/I/51jBaj0M0xL.jpg)
-
----
-
-class: fullscreen
-
-![code](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/codeschool.png)
-
----
-
-class: fullscreen
-
-![code](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/aerotwist.png)
-
----
-
-class: fullscreen
-
-![code](https://raw.githubusercontent.com/ewendel/frontend--bilder/master/squashligaen.png)
-
----
-
-# Ressursser
-
-### Blogger
-[Superhero.js](http://api.jquery.com/)
-<br>[Aerotwist](http://aerotwist.com/)
-<br>[JS - The Weird Parts](https://medium.com/@daffl/javascript-the-weird-parts-8ff3da55798e)
-<br>[BEKK Open: From jQuery to Backbone](http://open.bekk.no/from-jquery-to-backbone)
-
-### Bøker
-[JavaScript - The Good Parts](http://shop.oreilly.com/product/9780596517748.do)
-<br>[Eloquent JavaScript](http://eloquentjavascript.net/) (generell)
-<br>[JavaScript Allongé](https://leanpub.com/javascript-allonge) (funksjonell js)
-<br>[JavaScript Patterns](http://shop.oreilly.com/product/9780596806767.do)
-
-### Interaktivt
-[Untrusted](http://alexnisnevich.github.io/untrusted/) (js-spill)
-<br>[CodeWars](http://www.codewars.com/) (tjen poeng ved å kode)
-<br>[Code School](https://www.codeschool.com/) (interaktive kurs)
-<br>[CSS Weekly](http://css-weekly.com), [JS Weekly](http://javascriptweekly.com), [HTML5 Weekly](http://html5weekly.com/) (nyhetsbrev)
-
----
 
 class: fullscreen
 
