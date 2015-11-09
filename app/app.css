@@ -1,0 +1,37 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+body.dark {
+    color: white;
+    background: black;
+}
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+nav:after {
+    content: ' ';
+    height: 0;
+    visibility: none;
+    display: block;
+    clear: both;
+}
+
+nav button {
+    color: inherit;
+    float: left;
+    width: 33.3333333333333%;
+    height: 50px;
+    border: 0;
+    background: none;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
