@@ -1,9 +1,7 @@
 $(document).ready(function(e) {
     $('nav button').on('click', changeSectionClickHandler);
     $('.add-picture-button').on('click', addPictureClickHandler);
-    $('.toggle-theme').on('click', changeThemeClickHandler);
 });
-
 
 function changeSectionClickHandler(e) {
     var section = e.target.getAttribute('data-target')
@@ -24,8 +22,4 @@ function addPicture(url) {
     var html = '<img src="' + url +'" />';
     $('section.pictures img:last').after(html);
     $('.add-picture-url').val('');
-}
-
-function changeThemeClickHandler(e) {
-    $('body').toggleClass('dark');
 }

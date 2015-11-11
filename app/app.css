@@ -2,10 +2,6 @@ body {
     padding: 0;
     margin: 0;
 }
-body.dark {
-    color: white;
-    background: black;
-}
 
 .section {
     display: none;
@@ -30,6 +26,6 @@ nav button {
     background: 0;
     height: 40px;
     float: left;
-    width: 33.333333333333333%;
+    width: 50%;
     color: inherit;
 }
