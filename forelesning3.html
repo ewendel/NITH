@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Introduksjon til JavaScript - Kurs i grensesnittsprogrammering</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400|Dosis:300,400|Source+Code+Pro:200,300,400,400bold' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="remark/kimjoe.css">
+    <style type="text/css" media="screen">
+
+      .jquery { background-color: #1E2837; }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: middle center yellow
+
+# Teknisk innlevering
+
+Grensesnittsdesign<br>
+Torsdag 12. nov 2015<br>
+Erik Wendel<br>
+
+---
+
+class: agenda
+
+# Agenda
+
+### Krav, teknisk innlevering
+### Oppsett av app
+### Lagring: LocalStorage
+### Ressursser: javascript og jquery
+### Spørsmål?
+
+---
+
+# Teknisk innlevering
+
+frist søndag 6. desember
+
+leveres i grupper
+
+last opp ZIP-fil eller deploy til GitHub
+
+--
+
+### skal ha minst tre view
+
+--
+
+### skal benytte lagring
+
+--
+
+### skal ta input fra bruker
+
+
+---
+
+class: middle center
+
+# Oppsett av app
+
+---
+
+# Local Storage
+        // Lagre
+        localStorage.setItem('mykey', 'myvalue');
+        // Hente
+        localStorage.getItem('mykey'); // returns 'myvalue'
+        // Fjerne
+        localStorage.setItem('mykey', null),
+        // Fjerne alle
+        localStorage.clear();
+
+Local Storage lagrer kun strenger.
+
+        JSON.parse()
+
+        JSON.stringify()
+
+---
+
+# Ressursser:
+
+https://www.codecademy.com/learn/javascript
+
+https://www.codeschool.com/courses/try-jquery
+
+---
+
+class: middle center yellow
+
+# Spørsmål?
+
+erik.wendel@bekk.no
+    
+    </textarea>
+    <script src="http://gnab.github.com/remark/downloads/remark-0.5.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="js/remark.language.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+          highlightStyle: 'tomorrow',
+          highlightLanguage: 'javascript'
+        }) ;
+      var a = [];
+      slideshow.addListener("slidein",function(b,c){if(a.indexOf(c)>-1)return;var d=$(b);d.find("p:empty").remove(),d.find(".front-page").length===0&&d.find("h1").wrapInner("<span>"),d.find(".pushed img").parent().wrapInner("<span class='img'>"),a.push(c)})
+    </script>
+  </body>
+</html>
