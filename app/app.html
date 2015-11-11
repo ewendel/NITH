@@ -5,8 +5,35 @@
     <link rel="stylesheet" href="app.css" />
     <script type="text/javascript" src="../resources/jquery.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+<nav>
+    <button data-target="main">Forside</button>
+    <button data-target="pictures">Bilder</button>
+    <button data-target="settings">Innstillinger</button>
+</nav>
+
+<section class="main section active">
+    <h1>Forside</h1>
+
+    <p>Her kommer det mere tekst senere.</p>
+</section>
+
+<section class="pictures section">
+    <h1>Bilder</h1>
+    <img src="http://placekitten.com/g/320/320" />
+
+    <input class="add-picture-url" type="text" />
+    <button class="add-picture-button">Legg til</button>
+</section>
+
+<section class="section settings">
+    <h1>Innstillinger</h1>
+    <button class="toggle-theme">Bytt fargetema</button>
+</section>
+
 
 </body>
 </html>

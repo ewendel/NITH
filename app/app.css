@@ -2,3 +2,34 @@ body {
     padding: 0;
     margin: 0;
 }
+body.dark {
+    color: white;
+    background: black;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+nav:after {
+    content: ' ';
+    height: 0;
+    display: block;
+    visibility: none;
+    clear: both;
+}
+
+nav button {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    background: 0;
+    height: 40px;
+    float: left;
+    width: 33.333333333333333%;
+    color: inherit;
+}
